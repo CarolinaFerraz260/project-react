@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import SearchForm from "../../components/SearchFrom";
-<<<<<<< HEAD
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-=======
+
 function Search() {
     const [tags, setTags] = useState(new Set());
     const [data, setData] = useState([]);
@@ -33,7 +32,6 @@ function Search() {
         (checkbox.checked) ? newArr.add(checkbox.value) : newArr.delete(checkbox.value);
         setTags(newArr);
     }
->>>>>>> 32308a8af30b80d10102769d10069504fcfa96fb
 
 function Search() {
   const [tags, setTags] = useState(new Set());
@@ -78,6 +76,7 @@ function Search() {
     console.log(a.user);
     console.log(a.year);
   });
+}
 
   return (
     <>

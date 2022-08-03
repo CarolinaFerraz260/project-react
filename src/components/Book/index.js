@@ -5,7 +5,6 @@ import {
   ContainerButtonLike,
   ButtonLike,
 } from "./styles";
-import Livro from "../../assets/Livro.jpg";
 import iconLikeEnabled from "../../assets/iconLikeEnabled.svg";
 import iconLikeDisabled from "../../assets/iconLikeDisabled.svg";
 
@@ -14,7 +13,7 @@ const likes = {
   likeDisabled: iconLikeDisabled,
 };
 
-const Book = () => {
+const Book = ({ image }) => {
   const [like, setLike] = useState(false);
 
   const changeImage = () => {
@@ -24,7 +23,7 @@ const Book = () => {
   return (
     <>
       <ContainerBook>
-        <ImageBook src={Livro}></ImageBook>
+        <ImageBook src={image}></ImageBook>
         <ContainerButtonLike>
           <ButtonLike onClick={changeImage}>
             <img src={like ? likes.likeEnabled : likes.likeDisabled} alt="like" />
