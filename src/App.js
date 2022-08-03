@@ -3,6 +3,7 @@ import React, { useState } from "react";
 /* import Header from "./components/Header";
 import Register from "./pages/Register";*/
 /* import Search from "./pages/Search"; */
+/* import Footer from "./components/Footer"; */
 function App() {
   const [token, setToken] = useState();
 
@@ -31,6 +32,7 @@ function App() {
       {/*  <Header /> */}
       <Login handleSubmit={handleSubmit} />
       {/*  <Register /> */}
+      {/* <Footer /> */}
     </>
   );
 }
