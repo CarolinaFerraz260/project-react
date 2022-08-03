@@ -1,10 +1,11 @@
 import React from "react";
 // import {} from "./styles";
 
-const Header = () => {
-  return <>
-  
-  </>;
-};
+function Header() {
+
+  return(
+    null
+  );
+}
 
 export default Header;

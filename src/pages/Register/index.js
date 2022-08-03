@@ -1,11 +1,10 @@
 import React from "react";
 // import {} from "./styles";
 
-//chamar o footer, header, etc aqui
-const Home = () => {
+const Register = () => {
   return <>
   
   </>;
 };
 
-export default Home;
+export default Register;

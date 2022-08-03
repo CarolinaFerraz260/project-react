@@ -1,31 +1,42 @@
 import React from "react";
-import { inputProfile, buttonSubmit } from "./styles";
+import {
+  ContainerFormLogin,
+  FormLogin,
+  InputProfile,
+  ImageLogin,
+  ContainerAllButtons,
+  ContainerButton,
+  ButtonLogin,
+  ButtonRegister,
+} from "./styles";
 
 const Login = () => {
   return (
     <>
-      <form>
-        Name:{" "}
-        <inputProfile
-          placeholder="Name"
-          name="nameUser"
-          type="text"
-        ></inputProfile>
-        Email:{" "}
-        <inputProfile
-          placeholder="Email"
-          name="emailUser"
-          type="email"
-        ></inputProfile>
-        Password:{" "}
-        <inputProfile
-          placeholder="Password"
-          name="passwUser"
-          type="password"
-        ></inputProfile>
-        Image: <inputProfile name="imageUser" type="file"></inputProfile>
-        <buttonSubmit type="submit">Submit</buttonSubmit>
-      </form>
+      <ContainerFormLogin>
+        <FormLogin>
+          <ImageLogin href="../../assets/main.png"></ImageLogin>
+          <InputProfile
+            placeholder="Name"
+            name="nameUser"
+            type="text"
+          ></InputProfile>
+          <InputProfile
+            placeholder="Password"
+            name="passwUser"
+            type="password"
+          ></InputProfile>
+          <ContainerAllButtons>
+            <ContainerButton>
+              <ButtonLogin type="submit">Login</ButtonLogin>
+            </ContainerButton>
+            <ContainerButton>
+              {" "}
+              <ButtonRegister type="submit">Register</ButtonRegister>
+            </ContainerButton>
+          </ContainerAllButtons>
+        </FormLogin>
+      </ContainerFormLogin>
     </>
   );
 };
