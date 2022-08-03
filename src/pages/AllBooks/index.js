@@ -1,10 +1,10 @@
 import React from "react";
 // import {} from "./styles";
 
-const Books = () => {
+const AllBooks = () => {
   return <>
   
   </>;
 };
 
-export default Books;
+export default AllBooks;
