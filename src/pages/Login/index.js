@@ -4,22 +4,23 @@ import {
   ContainerFormLogin,
   FormLogin,
   InputProfile,
-  ImageLogin,
+  ContainerImage,
   ContainerAllButtons,
   ContainerButton,
   ButtonLogin,
   ButtonRegister,
 } from "./styles";
 
-
 const Login = () => {
   return (
     <>
       <ContainerFormLogin>
         <FormLogin>
-          <ImageLogin src={Image} alt="user"/>
+          <ContainerImage>
+            <img src={Image} alt="User" />
+          </ContainerImage>
           <InputProfile
-            placeholder="Name"
+            placeholder="Username"
             name="nameUser"
             type="text"
           ></InputProfile>
