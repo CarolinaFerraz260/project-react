@@ -15,6 +15,7 @@ function Header() {
           </a>
 
 					<div className="icons">
+            
             <a title="Search" href="#" >
 						  <img className="search-icon" src={search} alt="Search icon" />
             </a>

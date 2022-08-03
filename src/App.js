@@ -2,6 +2,7 @@ import Login from "./pages/Login";
 import Header from "./components/Header";
 import Register from "./pages/Register";
 import Search from "./pages/Search";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Login />
       <Register />
+      <Footer />
     </>
   );
 }
