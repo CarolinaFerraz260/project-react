@@ -1,10 +1,5 @@
-import Login from "./pages/Login";
 import React, { useState } from "react";
-/*  import Header from "./components/Header"; */
 import Router from './router'
-import Register from "./pages/Register";
-/* import Search from "./pages/Search"; */
-/* import Footer from "./components/Footer"; */
 
 function App() {
   const [token, setToken] = useState();
@@ -29,12 +24,7 @@ function App() {
 
   return (
     <>
-      <Router />
-      {/* <Search /> */}
-      {/*  <Header /> */}
-      <Login handleSubmit={handleSubmit} />
-      <Register />
-      {/* <Footer /> */}
+      <Router handleSubmit={handleSubmit} />
     </>
   );
 }
