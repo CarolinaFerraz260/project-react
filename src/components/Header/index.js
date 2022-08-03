@@ -3,9 +3,9 @@ import React from "react";
 
 function Header() {
 
-  return(
-    null
-  );
+  return <>
+  
+  </>;
 }
 
 export default Header;
