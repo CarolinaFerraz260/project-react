@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "../../assets/main.png";
 import {
   ContainerFormLogin,
   FormLogin,
@@ -10,12 +11,13 @@ import {
   ButtonRegister,
 } from "./styles";
 
+
 const Login = () => {
   return (
     <>
       <ContainerFormLogin>
         <FormLogin>
-          <ImageLogin href="../../assets/main.png"></ImageLogin>
+          <ImageLogin src={Image} alt="user"/>
           <InputProfile
             placeholder="Name"
             name="nameUser"
