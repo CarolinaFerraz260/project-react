@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React /*, { useState } */ from "react";
 import Router from './router'
 
 function App() {
-  const [token, setToken] = useState();
+  /*   const storedJwt = localStorage.getItem('token');
+    const [token, setToken] = useState(storedJwt || null); */
 
   async function loginUser(credentials) {
     return fetch("/api/auth/login", {
@@ -16,10 +17,16 @@ function App() {
 
   const handleSubmit = async (e, email, password) => {
     e.preventDefault();
-    const newToken = await loginUser({ email, password });
-    setToken(newToken);
-    console.log(newToken);
-    console.log(token);
+    const newToken = await loginUser({ email, password })
+      .then(data => {
+        if (data.status) {
+          return data.data.token;
+        }
+        return "";
+      });
+    document.cookie = `token=${newToken}`
+    /*     localStorage.setItem('token', newToken);
+        setToken(newToken); */
   };
 
   return (
