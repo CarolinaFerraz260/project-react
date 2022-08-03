@@ -10,11 +10,13 @@ export const FormLogin = styled.form`
   background: #ffffff;
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  padding: 40px;
+  padding: 60px 80px;
 `;
 
-export const ImageLogin = styled.image`
-  max-width: 20%;
+export const ContainerImage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const InputProfile = styled.input`
@@ -24,7 +26,7 @@ export const InputProfile = styled.input`
   outline: none;
   box-sizing: border-box;
   font-size: 18px;
-  padding: 8px;
+  padding: 8px 16px;
   display: flex;
   justify-content: center;
 
@@ -36,7 +38,7 @@ export const InputProfile = styled.input`
 `;
 
 export const ContainerAllButtons = styled.div`
-  margin-top: 24px;
+  margin-top: 15%;
 `;
 
 export const ContainerButton = styled.div`
@@ -47,7 +49,7 @@ export const ContainerButton = styled.div`
 export const ButtonLogin = styled.button`
   border: none;
   color: #fff;
-  padding: 8px 54px;
+  padding: 8px 64px;
   background: #fdc544;
   border-radius: 4px;
   font-size: 18px;
@@ -57,7 +59,7 @@ export const ButtonRegister = styled.button`
   margin-top: 8px;
   border: none;
   color: #fdc544;
-  padding: 8px 44px;
+  padding: 8px 54px;
   background: #fff5d4;
   border-radius: 4px;
   font-size: 18px;
