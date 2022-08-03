@@ -11,10 +11,13 @@ import {
   ButtonRegister,
 } from "./styles";
 import Image from "../../assets/register.jpg";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 const Register = () => {
   return (
     <>
+    <Header/>
       <ContainerFormLogin>
         <FormLogin>
           <ContainerImage>
@@ -46,6 +49,7 @@ const Register = () => {
           </ContainerAllButtons>
         </FormLogin>
       </ContainerFormLogin>
+      <Footer/>
     </>
   );
 };

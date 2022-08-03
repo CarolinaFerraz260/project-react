@@ -1,14 +1,15 @@
-import Login from "./pages/Login";
-import Header from "./components/Header";
-import Register from "./pages/Register";
-import Search from "./pages/Search";
+// import Login from "./pages/Login";
+// import Search from "./pages/Search";
+import Home from "./pages/Home";
+import Book from "./components/Book";
+
 function App() {
   return (
     <>
-      <Search />
-      <Header />
-      <Login />
-      <Register />
+      <Book />
+      {/* <Search /> */}
+      <Home />
+      {/* <Login /> */}
     </>
   );
 }

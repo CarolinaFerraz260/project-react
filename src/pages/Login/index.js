@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "../../assets/main.png";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import {
   ContainerFormLogin,
   FormLogin,
@@ -11,9 +13,11 @@ import {
   ButtonRegister,
 } from "./styles";
 
+
 const Login = () => {
   return (
     <>
+    <Header/>
       <ContainerFormLogin>
         <FormLogin>
           <ContainerImage>
@@ -40,6 +44,7 @@ const Login = () => {
           </ContainerAllButtons>
         </FormLogin>
       </ContainerFormLogin>
+      <Footer/>
     </>
   );
 };
