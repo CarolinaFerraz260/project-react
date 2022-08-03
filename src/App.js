@@ -5,18 +5,18 @@ import Router from './router'
 import Register from "./pages/Register";
 /* import Search from "./pages/Search"; */
 /* import Footer from "./components/Footer"; */
+
 function App() {
   const [token, setToken] = useState();
 
   async function loginUser(credentials) {
-    return fetch('/api/auth/login', {
-      method: 'POST',
+    return fetch("/api/auth/login", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(credentials)
-    })
-      .then(data => data.json())
+      body: JSON.stringify(credentials),
+    }).then((data) => data.json());
   }
 
   const handleSubmit = async (e, email, password) => {
@@ -25,7 +25,7 @@ function App() {
     setToken(newToken);
     console.log(newToken);
     console.log(token);
-  }
+  };
 
   return (
     <>

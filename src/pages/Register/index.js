@@ -11,6 +11,8 @@ import {
   ButtonRegister,
 } from "./styles";
 import Image from "../../assets/register.jpg";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 const Register = () => {
   const [name, setUserName] = useState();
@@ -53,6 +55,7 @@ const Register = () => {
 
   return (
     <>
+      <Header />
       <ContainerFormLogin>
         <FormLogin onSubmit={(e) => handleSubmit(e, email, password, name)}>
           <ContainerImage>
@@ -88,6 +91,7 @@ const Register = () => {
         </FormLogin>
       </ContainerFormLogin>
       <div>{message}</div>
+      <Footer />
     </>
   );
 };

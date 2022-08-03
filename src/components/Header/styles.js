@@ -1,10 +1,22 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  background-color: #1c1c1c;
-  max-width: 80%;
-  margin: auto;
-  padding: 16px 10px;
-  border-radius: 14px;
-  border: solid 1px #a9a9a9;
+export const Logo = styled.img`
+  height: 50px;
+`;
+
+export const ContainerLinks = styled.nav`
+  margin: 8px 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1px solid #FDC544; */
+`;
+
+export const SearchIcon = styled.img`
+  margin-right: 30px;
+`;
+
+export const Row = styled.hr`
+  border: 1px solid #fdc544;
 `;

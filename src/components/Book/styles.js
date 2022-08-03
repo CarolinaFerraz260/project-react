@@ -1,10 +1,22 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  background-color: #1c1c1c;
-  max-width: 80%;
-  margin: auto;
-  padding: 16px 10px;
-  border-radius: 14px;
-  border: solid 1px #a9a9a9;
+export const ContainerBook = styled.div`
+  justify-content: center;
+  padding: 20px;
+  width: fit-content;
+`;
+
+export const ImageBook = styled.img`
+  margin: 8px;
+`;
+
+export const ContainerButtonLike = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const ButtonLike = styled.button`
+  padding: 0px 34px;
+  border: none;
+  background-color: #fff;
 `;
