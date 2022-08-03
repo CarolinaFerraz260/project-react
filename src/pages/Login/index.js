@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+/* import Axios from "axios"; */
 import Image from "../../assets/main.png";
+/* import Proxy from "http-proxy-middleware"; */
+
 import {
   ContainerFormLogin,
   FormLogin,
@@ -11,23 +14,28 @@ import {
   ButtonRegister,
 } from "./styles";
 
-const Login = () => {
+const Login = ({ handleSubmit }) => {
+  const [email, setUserName] = useState();
+  const [password, setPassword] = useState();
+
   return (
     <>
       <ContainerFormLogin>
-        <FormLogin>
+        <FormLogin onSubmit={(e) => handleSubmit(e, email, password)}>
           <ContainerImage>
             <img src={Image} alt="User" />
           </ContainerImage>
           <InputProfile
             placeholder="Username"
-            name="nameUser"
+            name="email"
             type="text"
+            onChange={(e) => setUserName(e.target.value)}
           ></InputProfile>
           <InputProfile
             placeholder="Password"
             name="passwUser"
             type="password"
+            onChange={(e) => setPassword(e.target.value)}
           ></InputProfile>
           <ContainerAllButtons>
             <ContainerButton>
