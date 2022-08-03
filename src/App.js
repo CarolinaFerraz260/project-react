@@ -1,15 +1,16 @@
 import Login from "./pages/Login";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Register from "./pages/Register";
 
 function App() {
-	return (
-		<>
-			<Header />
-			<Login />
-			<Footer />
-		</>
-	);
+  return (
+    <>
+      <Header />
+      <Login />
+      <Register/>
+      <Footer />
+    </>
+  );
 }
 
 export default App;
