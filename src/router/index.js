@@ -8,21 +8,22 @@ import MyBooks from "../pages/MyBooks";
 import Favorites from "../pages/Favorites";
 // import Search from "../pages/Search";
 import Profile from "../pages/Profile";
+import Menu from "../components/Menu";
 
 const Router = () => {
   return (
     <BrowserRouter>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
-          <Route path="home" element={<Home />} />
-          <Route path="allBooks" element={<AllBooks />} />
-          <Route path="myBooks" element={<MyBooks />} />
-          <Route path="favorites" element={<Favorites />} />
-          {/* <Route path="search" element={< />} /> */}
-          <Route path="profile" element={<Profile />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Menu />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route path="home" element={<Home />} />
+        <Route path="allBooks" element={<AllBooks />} />
+        <Route path="myBooks" element={<MyBooks />} />
+        <Route path="favorites" element={<Favorites />} />
+        {/* <Route path="search" element={< />} /> */}
+        <Route path="profile" element={<Profile />} />
+      </Routes>
     </BrowserRouter>
   );
 };
