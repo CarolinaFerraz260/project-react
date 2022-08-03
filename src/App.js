@@ -1,5 +1,5 @@
-/* import Login from "./pages/Login"; */
-/* import React, { useState } from "react"; */
+import Login from "./pages/Login";
+import React, { useState } from "react";
 /*  import Header from "./components/Header"; */
 import Router from './router'
 import Register from "./pages/Register";
@@ -32,7 +32,7 @@ function App() {
       <Router />
       {/* <Search /> */}
       {/*  <Header /> */}
-      {/*  <Login handleSubmit={handleSubmit} /> */}
+      <Login handleSubmit={handleSubmit} />
       <Register />
       {/* <Footer /> */}
     </>
