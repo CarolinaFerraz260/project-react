@@ -1,14 +1,13 @@
 import React from "react";
-//import { ContainerFooter } from "./styles";
-import "./footer.css";
+import { ContainerFooter } from "./styles";
 
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer>
+    <ContainerFooter>
       <p>Potato Books</p>
       <p>© {year} The cool team. All Rights Reserved.</p>
-    </footer>
+    </ContainerFooter>
   );
 };
 

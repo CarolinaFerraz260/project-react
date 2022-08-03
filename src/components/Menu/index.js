@@ -8,12 +8,11 @@ function Menu() {
       <p>OLA</p>
 
       <ContainerMenu>
-        {/* <Link to="/home">Home</Link>
-        <Link to="/allBooks">All Books</Link>
+        <link to="/login">Home</link>
+        {/* <Link to="/allBooks">All Books</Link>
         <Link to="/myBooks">My Books</Link>
         <Link to="/favorites">Favorites</Link> */}
       </ContainerMenu>
-
     </>
   );
 }

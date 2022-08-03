@@ -8,7 +8,6 @@ import search from "../../assets/search.svg";
 import potato from "../../assets/beautifulpotato.png";
 
 function Header() {
-
   return (
     <>
       <header>
