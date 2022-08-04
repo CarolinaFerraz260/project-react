@@ -5,6 +5,11 @@ export const ContainerBook = styled.div`
   width: fit-content;
 `;
 
+export const TitleBook = styled.p`
+  text-align: center;
+  margin-bottom: 0;
+`;
+
 export const ContainerImage = styled.div`
   display: flex;
   justify-content: center;

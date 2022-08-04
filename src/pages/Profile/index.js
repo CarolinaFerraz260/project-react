@@ -31,13 +31,12 @@ const Profile = () => {
     profileData();
   }, []);
   async function profileData() {
-
     try {
       const response = await fetch(`api/user/profile`, {
         method: "GET",
         headers: new Headers({
           "Content-Type": "application/json",
-          Authorization: token[1]
+          Authorization: token[1],
         }),
       });
 
@@ -68,7 +67,7 @@ const Profile = () => {
       method: "DELETE",
       headers: new Headers({
         "Content-Type": "application/json",
-        Authorization: token[1]
+        Authorization: token[1],
       }),
     });
     profileData();
@@ -96,19 +95,27 @@ const Profile = () => {
                 >
                   Edit
                 </ButtonChangeProfile>
-                <ButtonChangeProfile>Add book</ButtonChangeProfile>
+                <ButtonChangeProfile
+                  onClick={() => navigate("../addbook", { state: userDtata })}
+                >
+                  Add book
+                </ButtonChangeProfile>
               </ContainerButtonChange>
             </ContainerProfile>
             <ContainerBooksUser>
               {userBooks.map((book, index) => (
-                <ContainerButton key={(index + 200)}>
+                <ContainerButton key={index + 200}>
                   <Book
                     image={book?.book_cover}
                     key={index}
                     showInfo={() => showInfo(book)}
                   />
-                  <ButtonDelete key={(index + 100)}>
-                    <img src={iconDelete} alt="delete" onClick={() => deleteBook(book.id)} />
+                  <ButtonDelete key={index + 100}>
+                    <img
+                      src={iconDelete}
+                      alt="delete"
+                      onClick={() => deleteBook(book.id)}
+                    />
                   </ButtonDelete>
                 </ContainerButton>
               ))}

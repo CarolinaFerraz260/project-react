@@ -5,6 +5,7 @@ import {
   ImageBook,
   ContainerButtonLike,
   ButtonLike,
+  TitleBook,
 } from "./styles";
 import iconLikeEnabled from "../../assets/iconLikeEnabled.svg";
 import iconLikeDisabled from "../../assets/iconLikeDisabled.svg";
@@ -24,6 +25,7 @@ const Book = ({ image, showInfo }) => {
   return (
     <>
       <ContainerBook>
+        <TitleBook>Ola</TitleBook>
         <ContainerImage>
           <ImageBook src={image} onClick={showInfo}></ImageBook>
         </ContainerImage>
