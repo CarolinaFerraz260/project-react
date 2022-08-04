@@ -1,6 +1,13 @@
 import React from "react";
-import { ContainerLinks, Logo, SearchIcon, Row } from "./styles";
-
+import {
+  ContainerLinks,
+  Logo,
+  ProfileIcon,
+  SearchIcon,
+  Row,
+  ContainerMenu,
+  Links,
+} from "./styles";
 // import { Link } from "react-router-dom";
 // import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import profile from "../../assets/profile.svg";
@@ -12,24 +19,19 @@ function Header() {
     <>
       <header>
         <ContainerLinks>
-          {/* <Link to="/home">
-						<img className="logo" src={potato} alt="Project logo" />
-					</Link> */}
-
-          {/* <a href="/home" onClick={ () => navigate("/home")}>
-						<img className="logo" src={potato} alt="Project logo" />
-					</a> */}
-
           <a title="Home Page" href="/">
             <Logo src={potato} alt="logo" />
           </a>
-
+          <ContainerMenu>
+            <Links to="/myBooks">My Books</Links>
+            <Links to="/myBooks">Logout</Links>
+          </ContainerMenu>
           <div>
             <a title="Search" href="/search">
               <SearchIcon src={search} alt="Search icon" />
             </a>
             <a title="Your Profile" href="/">
-              <img src={profile} alt="Profile icon" />
+              <ProfileIcon src={profile} alt="Profile icon" />
             </a>
           </div>
         </ContainerLinks>

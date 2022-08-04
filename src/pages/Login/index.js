@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Image from "../../assets/main.png";
 import { Navigate } from 'react-router-dom';
+import Footer from "../../components/Footer";
+
 import {
   ContainerFormLogin,
   FormLogin,
@@ -81,6 +83,7 @@ const Login = () => {
               </ContainerAllButtons>
             </FormLogin>
           </ContainerFormLogin>
+          <Footer />
         </>
       }
     </>

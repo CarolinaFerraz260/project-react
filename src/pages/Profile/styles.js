@@ -5,8 +5,7 @@ export const ContainerPageProfile = styled.div`
 `;
 
 export const ImageHeaderProfile = styled.img`
-  min-width: 80%;
-  margin-bottom: 0;
+  min-width: 100%;
 `;
 
 export const ContainerProfileAndBooks = styled.div`
@@ -17,7 +16,6 @@ export const ContainerProfile = styled.div`
   background-color: #fff3c9;
   width: fit-content;
   padding: 20px 60px;
-  margin-top: 0;
 `;
 
 export const NameUser = styled.p`
@@ -28,19 +26,25 @@ export const NameUser = styled.p`
   text-align: center;
 `;
 
+export const ContainerImageUser = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const ImageUser = styled.img`
+  border-radius: 50%;
+  max-width: 50%;
+`;
+
 export const ContainerInfosProfile = styled.div`
   padding: 0;
 `;
 
-export const TitleInfoProfile = styled.p`
-  color: #000;
-  font-size: 18px;
-`;
-
-export const DescriptionInfoProfile = styled.p`
+export const EmailProfileUser = styled.p`
   color: #000;
   font-size: 16px;
   opacity: 70%;
+  text-align: center;
 `;
 
 export const ContainerBooksUser = styled.div`

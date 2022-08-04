@@ -11,7 +11,6 @@ import {
   ButtonRegister,
 } from "./styles";
 import Image from "../../assets/register.jpg";
-import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 const Register = () => {
@@ -21,41 +20,35 @@ const Register = () => {
   const [message, setMessage] = useState("");
   let isOk = true;
 
-
-
   async function RegisterUser(credentials) {
-    return fetch('/api/auth/register', {
-      method: 'POST',
+    return fetch("/api/auth/register", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(credentials)
+      body: JSON.stringify(credentials),
     })
-      .then(data => {
+      .then((data) => {
         if (!data.ok) isOk = false;
         return data.json();
       })
-      .then(data => {
+      .then((data) => {
         if (!isOk) {
           isOk = true;
-          throw new Error(data.errors[0])
+          throw new Error(data.errors[0]);
         }
         setMessage("Account Created");
       })
-      .catch(error => setMessage(error.message))
+      .catch((error) => setMessage(error.message));
   }
-
 
   const handleSubmit = async (e, email, password) => {
     e.preventDefault();
-    await RegisterUser({ email, password, name })
-
-  }
-
+    await RegisterUser({ email, password, name });
+  };
 
   return (
     <>
-      <Header />
       <ContainerFormLogin>
         <FormLogin onSubmit={(e) => handleSubmit(e, email, password, name)}>
           <ContainerImage>
