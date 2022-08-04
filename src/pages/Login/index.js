@@ -3,6 +3,7 @@ import Image from "../../assets/main.png";
 import { useNavigate, Navigate } from "react-router-dom";
 import Footer from "../../components/Footer";
 import potato from "../../assets/beautifulpotato.png";
+import { Link } from "react-router-dom";
 
 import {
   ContainerLogo,
@@ -56,7 +57,10 @@ const Login = () => {
     <>
       <ContainerLogo>
         {" "}
-        <Logo src={potato} alt="logo" />
+        <Link to="/">
+          {" "}
+          <Logo src={potato} alt="logo" />
+        </Link>
       </ContainerLogo>
 
       {login ? (
