@@ -9,8 +9,8 @@ export const ContainerProfileAndBooks = styled.div`
 `;
 
 export const ContainerProfile = styled.div`
-  background-color: #fff3c9;
-  max-width: 12%;
+  max-width: 10%;
+  margin: 0px 24px;
 `;
 
 export const NameUser = styled.p`
@@ -18,18 +18,17 @@ export const NameUser = styled.p`
   text-transform: uppercase;
   font-size: 24px;
   font-weight: bold;
-  text-align: center;
+  max-width: fit-content;
 `;
 
 export const ContainerImageUser = styled.div`
-  display: flex;
-  justify-content: center;
+  max-width:fit-content;
 `;
 
 export const ImageUser = styled.img`
   margin-top: 16px;
   border-radius: 50%;
-  min-width: 20%;
+  max-width: 80%;
 `;
 
 export const ContainerInfosProfile = styled.div`
@@ -40,7 +39,7 @@ export const EmailProfileUser = styled.p`
   color: #000;
   font-size: 16px;
   opacity: 70%;
-  text-align: center;
+  width: fit-content;
 `;
 
 export const ContainerBooksUser = styled.div`

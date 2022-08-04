@@ -20,7 +20,6 @@ const Profile = () => {
   const [tokenValid, setTokenValid] = useState(true);
   const [userBooks, setuserBooks] = useState([]);
   useEffect(() => {
-
     async function profileData() {
       const token = document.cookie
         .split("; ")
@@ -28,7 +27,6 @@ const Profile = () => {
         .filter(([a, b]) => a === "token")
         .flat();
       try {
-
         const response = await fetch(`api/user/profile`, {
           method: "GET",
           headers: new Headers({
@@ -43,13 +41,14 @@ const Profile = () => {
         const booksResponse = await fetch(`api/book`, {
           method: "get",
           headers: {
-            "Content-Type": "application/json"
-          }
+            "Content-Type": "application/json",
+          },
         });
         const jsonBooksResponse = await booksResponse.json();
-        const userBooksData = jsonBooksResponse.data.filter(book => book.user.id === jsonResponse.data.id)
+        const userBooksData = jsonBooksResponse.data.filter(
+          (book) => book.user.id === jsonResponse.data.id
+        );
         setuserBooks(userBooksData);
-
       } catch (err) {
         setTokenValid(false);
         console.error(err.message);
@@ -60,38 +59,36 @@ const Profile = () => {
 
   return (
     <>
-      {!tokenValid ?
+      {!tokenValid ? (
         <div>
           <Navigate to="../home" replace={true} />
         </div>
-        :
+      ) : (
         <>
           <Header />
-          <ContainerPageProfile>
+          {/* <ContainerPageProfile> */}
             <ContainerProfileAndBooks>
               <ContainerProfile>
-                {/* Infos do user */}
                 <ContainerImageUser>
-                  {" "}
                   <ImageUser src={userDtata?.profile_picture} alt="User" />
                 </ContainerImageUser>
-
                 <NameUser>{userDtata?.name}</NameUser>
                 <ContainerInfosProfile>
-                  {/* Infos do user */}
                   <EmailProfileUser>{userDtata?.email}</EmailProfileUser>
                 </ContainerInfosProfile>
-              </ContainerProfile >
+              </ContainerProfile>
               <ContainerBooksUser>
-                {userBooks.map((book, index) => <Book image={book?.book_cover} key={index} />)}
+                {userBooks.map((book, index) => (
+                  <Book image={book?.book_cover} key={index} />
+                ))}
               </ContainerBooksUser>
-            </ContainerProfileAndBooks >
-          </ContainerPageProfile >
+            </ContainerProfileAndBooks>
+          {/* </ContainerPageProfile> */}
           <Footer />
         </>
-      }
+      )}
     </>
   );
-}
+};
 
 export default Profile;
