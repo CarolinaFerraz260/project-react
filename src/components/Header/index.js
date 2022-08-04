@@ -9,14 +9,20 @@ import {
   ContainerMenu,
   LinkHome,
   ButtonLogout,
+  ButtonLogin,
 } from "./styles";
 import profile from "../../assets/profile.svg";
 import search from "../../assets/search.svg";
 import potato from "../../assets/beautifulpotato.png";
+import { ContainerFormLogin } from "../../pages/Login/styles";
 
 function Header() {
   const navigate = useNavigate();
   function logout() {
+    document.cookie = "token=";
+    navigate("../login");
+  }
+  function login() {
     document.cookie = "token=";
     navigate("../login");
   }
@@ -35,6 +41,7 @@ function Header() {
               <ProfileIcon src={profile} alt="Profile icon" />
             </a>
             <ButtonLogout onClick={logout}>Logout</ButtonLogout>
+            <ButtonLogin onClick={login}>Login</ButtonLogin>
           </ContainerMenu>
         </ContainerLinks>
       </header>

@@ -70,3 +70,19 @@ export const ButtonLogout = styled.button`
     transform: scale(1.2);
   }
 `;
+
+export const ButtonLogin = styled.button`
+  padding: 8px 0px;
+  font-family: "Anton", sans-serif;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  font-size: 18px;
+
+  &:hover {
+    color: #fdc544;
+    opacity: 100%;
+    -webkit-transform: scale(1.4);
+    transform: scale(1.2);
+  }
+`;

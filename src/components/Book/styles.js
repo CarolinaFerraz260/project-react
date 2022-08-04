@@ -22,6 +22,7 @@ export const ImageBook = styled.img`
 export const ContainerButtonLike = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: row;
 `;
 
 export const ButtonLike = styled.button`

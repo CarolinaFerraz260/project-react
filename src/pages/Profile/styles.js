@@ -63,3 +63,13 @@ export const ContainerBooksUser = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
+
+export const ContainerButton = styled.div`
+  text-align: center;
+`;
+
+export const ButtonDelete = styled.button`
+  border: none;
+  background-color: #fff;
+  margin-bottom: 20px;
+`;

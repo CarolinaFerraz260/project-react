@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Book from "../../components/Book";
 import { Navigate, useNavigate } from "react-router-dom";
+import iconDelete from "../../assets/iconDelete.svg";
 import {
   ContainerProfileAndBooks,
   ContainerProfile,
@@ -12,6 +13,8 @@ import {
   ContainerButtonChange,
   ButtonChangeProfile,
   ContainerBooksUser,
+  ContainerButton,
+  ButtonDelete,
 } from "./styles";
 
 const Profile = () => {
@@ -81,11 +84,16 @@ const Profile = () => {
             </ContainerProfile>
             <ContainerBooksUser>
               {userBooks.map((book, index) => (
-                <Book
-                  image={book?.book_cover}
-                  key={index}
-                  showInfo={() => showInfo(book)}
-                />
+                <ContainerButton>
+                  <Book
+                    image={book?.book_cover}
+                    key={index}
+                    showInfo={() => showInfo(book)}
+                  />
+                    <ButtonDelete>
+                      <img src={iconDelete} alt="delete" />
+                    </ButtonDelete>
+                </ContainerButton>
               ))}
             </ContainerBooksUser>
           </ContainerProfileAndBooks>
