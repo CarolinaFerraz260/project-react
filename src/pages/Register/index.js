@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   ContainerLogo,
   Logo,
@@ -17,6 +18,7 @@ import Footer from "../../components/Footer";
 import potato from "../../assets/beautifulpotato.png";
 
 const Register = () => {
+  const navigate = useNavigate();
   const [name, setUserName] = useState();
   const [password, setUserPassword] = useState();
   const [email, setUserEmail] = useState();
@@ -49,6 +51,10 @@ const Register = () => {
     e.preventDefault();
     await RegisterUser({ email, password, name });
   };
+
+  function loginButton() {
+    navigate("../login")
+  }
 
   return (
     <>
@@ -85,7 +91,7 @@ const Register = () => {
             </ContainerButton>
             <ContainerButton>
               {" "}
-              <ButtonLogin type="submit">Login</ButtonLogin>
+              <ButtonLogin type="button" onClick={loginButton}>Login</ButtonLogin>
             </ContainerButton>
           </ContainerAllButtons>
         </FormRegister>
