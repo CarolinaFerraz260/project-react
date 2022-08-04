@@ -9,11 +9,7 @@ function Search() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(
-      `https://ancient-temple-61124.herokuapp.com/api/book/?${Array.from(
-        tags
-      ).join("&")}`
-    )
+    fetch(`/api/book/?${Array.from(tags).join("&")}`)
       .then((response) => response.json())
       .then((json) => {
         setData(json.data);
