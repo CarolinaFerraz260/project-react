@@ -54,7 +54,6 @@ export const ButtonChangeProfile = styled.button`
   margin-right: 8px;
 
   &:hover {
-    opacity: 100%;
     -webkit-transform: scale(1.4);
     transform: scale(1.1);
   }
@@ -66,14 +65,18 @@ export const ContainerBooksUser = styled.div`
 `;
 
 export const ContainerButton = styled.div`
-  position: relative;
+  text-align: center;
+  margin-top: 0;
 `;
 
 export const ButtonDelete = styled.button`
   border: none;
   background-color: #fff;
   margin-bottom: 20px;
-  position: absolute;
-  right: 80px;
-  bottom: 3px;
+  margin-top: 0;
+
+  &:hover {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.3);
+  }
 `;
