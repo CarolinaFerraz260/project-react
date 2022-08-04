@@ -7,28 +7,26 @@ import {
   SearchIcon,
   Row,
   ContainerMenu,
-  Links,
+  LinkHome,
   ButtonLogout,
 } from "./styles";
-// import { Link } from "react-router-dom";
-// import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import profile from "../../assets/profile.svg";
 import search from "../../assets/search.svg";
 import potato from "../../assets/beautifulpotato.png";
 
 function Header() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   function logout() {
     document.cookie = "token=";
-    navigate("../login")
+    navigate("../login");
   }
   return (
     <>
       <header>
         <ContainerLinks>
-          <Links title="Home Page" to="/">
+          <LinkHome title="Home Page" to="/">
             <Logo src={potato} alt="logo" />
-          </Links>
+          </LinkHome>
           <ContainerMenu>
             <a title="Search" href="/search">
               <SearchIcon src={search} alt="Search icon" />

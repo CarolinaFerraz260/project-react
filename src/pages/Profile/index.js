@@ -4,13 +4,10 @@ import Footer from "../../components/Footer";
 import Book from "../../components/Book";
 import { Navigate } from "react-router-dom";
 import {
-  ContainerPageProfile,
-  ContainerImageUser,
   ContainerProfileAndBooks,
   ContainerProfile,
   NameUser,
   ImageUser,
-  ContainerInfosProfile,
   EmailProfileUser,
   ContainerBooksUser,
 } from "./styles";
@@ -66,16 +63,11 @@ const Profile = () => {
       ) : (
         <>
           <Header />
-          {/* <ContainerPageProfile> */}
             <ContainerProfileAndBooks>
-              <ContainerProfile>
-                <ContainerImageUser>
+              <ContainerProfile> 
                   <ImageUser src={userDtata?.profile_picture} alt="User" />
-                </ContainerImageUser>
                 <NameUser>{userDtata?.name}</NameUser>
-                <ContainerInfosProfile>
                   <EmailProfileUser>{userDtata?.email}</EmailProfileUser>
-                </ContainerInfosProfile>
               </ContainerProfile>
               <ContainerBooksUser>
                 {userBooks.map((book, index) => (
@@ -83,7 +75,6 @@ const Profile = () => {
                 ))}
               </ContainerBooksUser>
             </ContainerProfileAndBooks>
-          {/* </ContainerPageProfile> */}
           <Footer />
         </>
       )}

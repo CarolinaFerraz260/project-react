@@ -24,12 +24,12 @@ export const TitleBook = styled.p`
 `;
 
 export const DescriptionBook = styled.p`
-    font-size: 18px;
-    margin-bottom: 0;
+  font-size: 18px;
+  margin-bottom: 0;
 `;
 
 export const YearBook = styled.p`
-    font-size: 18px;
-    color: #696969;
-    margin-top: 8px;
+  font-size: 18px;
+  color: #696969;
+  margin-top: 8px;
 `;

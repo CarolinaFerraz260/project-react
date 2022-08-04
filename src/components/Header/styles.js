@@ -38,19 +38,13 @@ export const ContainerMenu = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
   width: fit-content;
   margin: 20px;
 `;
 
-export const Links = styled(Link)`
+export const LinkHome = styled(Link)`
   padding: 8px 20px;
   margin: 8px;
-  text-decoration: none;
-  font-family: "Anton", sans-serif;
-  font-style: bold;
-  color: #000;
-  opacity: 80%;
 
   &:hover {
     color: #fdc544;
@@ -63,11 +57,8 @@ export const Links = styled(Link)`
 export const ButtonLogout = styled.button`
   padding: 8px 20px;
   margin: 8px;
-  text-decoration: none;
   font-family: "Anton", sans-serif;
-  font-style: bold;
   color: #000;
-  opacity: 80%;
   background-color: #fff;
   border: none;
   font-size: 18px;

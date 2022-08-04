@@ -13,7 +13,7 @@ const InfoBook = ({}) => {
   return (
     <>
       <ContainerBook>
-          <ImageBook src={Image}></ImageBook>
+        <ImageBook src={Image}></ImageBook>
         <ContainerInfoBook>
           <TitleBook>OLA</TitleBook>
           <DescriptionBook>ODOEDe</DescriptionBook>

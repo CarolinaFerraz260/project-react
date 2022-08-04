@@ -50,15 +50,13 @@ const Login = () => {
   }
 
   function registerButton() {
-    navigate("../register")
+    navigate("../register");
   }
 
   return (
     <>
       <ContainerLogo>
-        {" "}
         <Link to="/">
-          {" "}
           <Logo src={potato} alt="logo" />
         </Link>
       </ContainerLogo>
@@ -93,7 +91,9 @@ const Login = () => {
                 </ContainerButton>
                 <ContainerButton>
                   {" "}
-                  <ButtonRegister type="button" onClick={registerButton}>Register</ButtonRegister>
+                  <ButtonRegister type="button" onClick={registerButton}>
+                    Register
+                  </ButtonRegister>
                 </ContainerButton>
               </ContainerAllButtons>
             </FormLogin>

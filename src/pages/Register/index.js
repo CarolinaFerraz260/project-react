@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Image from "../../assets/register.jpg";
+import Footer from "../../components/Footer";
+import potato from "../../assets/beautifulpotato.png";
+import { Link } from "react-router-dom";
 import {
   ContainerLogo,
   Logo,
@@ -13,9 +17,6 @@ import {
   ButtonLogin,
   ButtonRegister,
 } from "./styles";
-import Image from "../../assets/register.jpg";
-import Footer from "../../components/Footer";
-import potato from "../../assets/beautifulpotato.png";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -53,14 +54,15 @@ const Register = () => {
   };
 
   function loginButton() {
-    navigate("../login")
+    navigate("../login");
   }
 
   return (
     <>
       <ContainerLogo>
-        {" "}
+      <Link to="/">
         <Logo src={potato} alt="logo" />
+        </Link>
       </ContainerLogo>
       <ContainerFormRegister>
         <FormRegister onSubmit={(e) => handleSubmit(e, email, password, name)}>
@@ -91,7 +93,9 @@ const Register = () => {
             </ContainerButton>
             <ContainerButton>
               {" "}
-              <ButtonLogin type="button" onClick={loginButton}>Login</ButtonLogin>
+              <ButtonLogin type="button" onClick={loginButton}>
+                Login
+              </ButtonLogin>
             </ContainerButton>
           </ContainerAllButtons>
         </FormRegister>
