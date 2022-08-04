@@ -1,20 +1,16 @@
 import React from "react";
-import { ContainerMenu } from "./styles";
-import { Link } from "react-router-dom";
+import { ContainerMenu, Links } from "./styles";
 
 function Menu() {
   return (
     <>
-      <p>OLA</p>
-
       <ContainerMenu>
-        <Link to="/home">Home</Link>
-        <Link to="/allBooks">All Books</Link>
-        <Link to="/myBooks">My Books</Link>
-        <Link to="/favorites">Favorites</Link>
+        <Links to="/home">Home</Links>
+        <Links to="/allBooks">All Books</Links>
+        <Links to="/myBooks">My Books</Links>
+        <Links to="/favorites">Favorites</Links>
         {/*  <Link to="/login">LOG</Link> */}
       </ContainerMenu>
-
     </>
   );
 }

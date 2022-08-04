@@ -1,6 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import Book from "../../components/Book";
+import Livro from "../../assets/Livro.jpg";
 import { useNavigate } from 'react-router-dom';
-// import {} from "./styles";
+// import Menu from "../../components/Menu";
+import HeaderProfile from "../../assets/headerProfile.jpg";
+import {
+  ContainerPageProfile,
+  ImageHeaderProfile,
+  ContainerProfileAndBooks,
+  ContainerProfile,
+  NameUser,
+  ContainerInfosProfile,
+  TitleInfoProfile,
+  DescriptionInfoProfile,
+  ContainerBooksUser,
+} from "./styles";
 
 const Profile = () => {
   const token = document.cookie.split("; ").map(a => a.split("=")).filter(([a, b]) => a === "token").flat();
@@ -30,14 +46,43 @@ const Profile = () => {
   useEffect(() => {
     if (!tokenValid) navigate("../home")
   }, [tokenValid]);
-
-
   return (
     <>
-      <div><img src={userDtata.profile_picture} /></div>
-      <div>{userDtata.email}</div>
-      <div>{userDtata.name}</div>
-    </>);
-}
+      <Header />
+      {/* <Menu /> */}
+      <ContainerPageProfile>
+        <ImageHeaderProfile src={HeaderProfile}></ImageHeaderProfile>
+        <div><img src={userDtata.profile_picture} alt="User" /></div>
+        <ContainerProfileAndBooks>
+        <ContainerProfile>
+          {/* Infos do user */}
+          <NameUser>{userDtata.name}</NameUser>
+          <ContainerInfosProfile>
+            <TitleInfoProfile>Email</TitleInfoProfile>
+            {/* Infos do user */}
+            <DescriptionInfoProfile>{userDtata.email}</DescriptionInfoProfile>
+          </ContainerInfosProfile>
+          <ContainerInfosProfile>
+            <TitleInfoProfile>Location</TitleInfoProfile>
+            {/* Infos do user */}
+            <DescriptionInfoProfile>Porto, Portugal</DescriptionInfoProfile>
+          </ContainerInfosProfile>
+          <ContainerInfosProfile>
+            <TitleInfoProfile>Joined</TitleInfoProfile>
+            {/* Infos do user */}
+            <DescriptionInfoProfile>June 2018</DescriptionInfoProfile>
+          </ContainerInfosProfile>
+        </ContainerProfile>
+        <ContainerBooksUser>
+          <Book image={Livro} />
+          <Book image={Livro} />
+          <Book image={Livro} />
+        </ContainerBooksUser>
+        </ContainerProfileAndBooks>
+      </ContainerPageProfile>
+      <Footer />
+    </>
+  );
+};
 
 export default Profile;
