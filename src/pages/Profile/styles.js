@@ -65,11 +65,14 @@ export const ContainerBooksUser = styled.div`
 `;
 
 export const ContainerButton = styled.div`
-  text-align: center;
+  position: relative;
 `;
 
 export const ButtonDelete = styled.button`
   border: none;
   background-color: #fff;
   margin-bottom: 20px;
+  position: absolute;
+  right: 80px;
+  bottom: 3px;
 `;
