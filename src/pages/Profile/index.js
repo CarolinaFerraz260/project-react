@@ -20,11 +20,6 @@ import {
 
 const Profile = () => {
   let navigate = useNavigate;
-  const token = document.cookie
-    .split("; ")
-    .map((a) => a.split("="))
-    .filter(([a, b]) => a === "token")
-    .flat();
   const [userDtata, setUserData] = useState({});
   const [tokenValid, setTokenValid] = useState(true);
 
