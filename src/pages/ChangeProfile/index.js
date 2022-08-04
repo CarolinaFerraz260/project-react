@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Livro from "../../assets/Livro.jpg";
-
 import {
   ContainerProfile,
   ContainerInfosUser,
@@ -33,17 +32,17 @@ const ChangeProfile = () => {
               placeholder="User name"
               name="nameUser"
               type="text"
-            ></InputEditProfile>
+            />
             <InputEditProfile
               placeholder="Email"
               name="emailUser"
               type="email"
-            ></InputEditProfile>
+            />
             <InputEditProfile
               placeholder="Password"
               name="passwUser"
               type="password"
-            ></InputEditProfile>
+            />
           </ContainerInputs>
         </ContainerInfosUser>
       </ContainerProfile>

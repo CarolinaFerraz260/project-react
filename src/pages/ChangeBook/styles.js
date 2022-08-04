@@ -1,0 +1,65 @@
+import styled from "styled-components";
+
+export const ContainerProfile = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const ContainerInfosUser = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+`;
+
+export const ContainerImageUser = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const ImageUser = styled.img`
+  margin-top: 16px;
+  border-radius: 50%;
+  max-width: 80%;
+`;
+
+export const ContainerInputs = styled.div`
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+export const InputChangeImage = styled.input`
+  padding: 4px;
+  margin-left: 8px;
+`;
+
+export const InputEditProfile = styled.input`
+  color: #000;
+  font-size: 16px;
+  margin: 4px 0;
+  padding: 2px 8px;
+`;
+
+export const ContainerButtonSave = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const ButtonSaveProfile = styled.button`
+  background-color: #fdc544;
+  color: #fff;
+  border-radius: 16px;
+  border: none;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  &:hover {
+    opacity: 100%;
+    -webkit-transform: scale(1.4);
+    transform: scale(1.1);
+  }
+`;
