@@ -89,7 +89,14 @@ const Profile = () => {
               <NameUser>{userDtata?.name}</NameUser>
               <EmailProfileUser>{userDtata?.email}</EmailProfileUser>
               <ContainerButtonChange>
-                <ButtonChangeProfile onClick={() => navigate("../changeprofile", { state: userDtata })}>Edit</ButtonChangeProfile>
+                <ButtonChangeProfile
+                  onClick={() =>
+                    navigate("../changeprofile", { state: userDtata })
+                  }
+                >
+                  Edit
+                </ButtonChangeProfile>
+                <ButtonChangeProfile>Add book</ButtonChangeProfile>
               </ContainerButtonChange>
             </ContainerProfile>
             <ContainerBooksUser>

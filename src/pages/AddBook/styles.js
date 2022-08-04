@@ -32,10 +32,8 @@ export const ContainerInputs = styled.div`
 `;
 
 export const InputChangeImage = styled.input`
-   color: #000;
-  font-size: 16px;
-  margin: 4px 0;
-  padding: 2px 8px;
+  padding: 4px;
+  margin-left: 8px;
 `;
 
 export const InputEditBook = styled.input`
@@ -45,12 +43,20 @@ export const InputEditBook = styled.input`
   padding: 2px 8px;
 `;
 
-export const ContainerButtonSave = styled.div`
+export const InputEditBookDescription = styled.input`
+  color: #000;
+  font-size: 16px;
+  margin: 4px 0;
+  padding: 2px 8px;
+  height: 200px;
+`;
+
+export const ContainerButtonAdd = styled.div`
   display: flex;
   justify-content: center;
 `;
 
-export const ButtonSaveBook = styled.button`
+export const ButtonAddBook = styled.button`
   background-color: #fdc544;
   color: #fff;
   border-radius: 16px;

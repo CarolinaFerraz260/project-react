@@ -8,6 +8,8 @@ import Profile from "../pages/Profile";
 import AboutBook from "../pages/AboutBook";
 import ChangeBook from "../pages/ChangeBook";
 import ChangeProfile from "../pages/ChangeProfile";
+import BooksBySearch from "../pages/BooksBySearch";
+import AddBook from "../pages/AddBook";
 
 const Router = () => {
   return (
@@ -22,6 +24,8 @@ const Router = () => {
         <Route path="aboutbook" element={<AboutBook />} />
         <Route path="changebook" element={<ChangeBook />} />
         <Route path="changeprofile" element={<ChangeProfile />} />
+        <Route path="booksbysearch" element={<BooksBySearch />} />
+        <Route path="addbook" element={<AddBook />} />
       </Routes>
     </BrowserRouter>
   );

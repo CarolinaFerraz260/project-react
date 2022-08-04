@@ -2,15 +2,15 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Livro from "../../assets/Livro.jpg";
 import {
-  ContainerProfile,
-  ContainerInfosUser,
+  ContainerBook,
+  ContainerInfosBook,
+  ContainerImageBook,
   InputChangeImage,
   ContainerInputs,
-  InputEditProfile,
-  ContainerImageUser,
-  ImageUser,
+  InputEditBook,
+  ImageBook,
   ContainerButtonSave,
-  ButtonSaveProfile,
+  ButtonSaveBook,
 } from "./styles";
 import { useLocation, useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
@@ -68,19 +68,19 @@ const ChangeBook = () => {
             <label>
               <InputChangeImage name="imageBook" type="text" placeholder="Book url" id="old_book_url"></InputChangeImage>
             </label>
-            <InputEditProfile
+            <InputEditBook
               placeholder="Book title"
               name="titleBook"
               type="text"
               id="old_book_title"
             />
-            <InputEditProfile
+            <InputEditBook
               placeholder="Book description"
               name="descriptionBook"
               type="text"
               id="old_book_description"
             />
-            <InputEditProfile
+            <InputEditBook
               placeholder="Book year"
               name="yearBook"
               type="number"

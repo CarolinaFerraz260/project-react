@@ -20,7 +20,6 @@ const InfoBook = ({ book }) => {
           {" "}
           <ButtonBack onClick={() => navigate("../profile")}> ◀</ButtonBack>
         </ContainerButtonBack>
-
         <div>
           <ImageBook src={book.book_cover}></ImageBook>
           <ContainerButtonChange>
