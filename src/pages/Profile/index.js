@@ -22,46 +22,56 @@ const Profile = () => {
   const [userDtata, setUserData] = useState({});
   const [tokenValid, setTokenValid] = useState(true);
   const [userBooks, setuserBooks] = useState([]);
+  const token = document.cookie
+    .split("; ")
+    .map((a) => a.split("="))
+    .filter(([a, b]) => a === "token")
+    .flat();
   useEffect(() => {
-    async function profileData() {
-      const token = document.cookie
-        .split("; ")
-        .map((a) => a.split("="))
-        .filter(([a, b]) => a === "token")
-        .flat();
-      try {
-        const response = await fetch(`api/user/profile`, {
-          method: "GET",
-          headers: new Headers({
-            "Content-Type": "application/json",
-            Authorization: token[1],
-          }),
-        });
-
-        const jsonResponse = await response.json();
-        setTokenValid(true);
-        setUserData(jsonResponse.data);
-        const booksResponse = await fetch(`api/book`, {
-          method: "get",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        const jsonBooksResponse = await booksResponse.json();
-        const userBooksData = jsonBooksResponse.data.filter(
-          (book) => book.user.id === jsonResponse.data.id
-        );
-        setuserBooks(userBooksData);
-      } catch (err) {
-        setTokenValid(false);
-        console.error(err.message);
-      }
-    }
     profileData();
   }, []);
+  async function profileData() {
 
+    try {
+      const response = await fetch(`api/user/profile`, {
+        method: "GET",
+        headers: new Headers({
+          "Content-Type": "application/json",
+          Authorization: token[1]
+        }),
+      });
+
+      const jsonResponse = await response.json();
+      setTokenValid(true);
+      setUserData(jsonResponse.data);
+      const booksResponse = await fetch(`api/book`, {
+        method: "get",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const jsonBooksResponse = await booksResponse.json();
+      const userBooksData = jsonBooksResponse.data.filter(
+        (book) => book.user.id === jsonResponse.data.id
+      );
+      setuserBooks(userBooksData);
+    } catch (err) {
+      setTokenValid(false);
+      console.error(err.message);
+    }
+  }
   function showInfo(book) {
     navigate("../aboutbook", { state: book });
+  }
+  async function deleteBook(id) {
+    await fetch(`/api/book/${id}`, {
+      method: "DELETE",
+      headers: new Headers({
+        "Content-Type": "application/json",
+        Authorization: token[1]
+      }),
+    });
+    profileData();
   }
 
   return (
@@ -91,14 +101,14 @@ const Profile = () => {
             </ContainerProfile>
             <ContainerBooksUser>
               {userBooks.map((book, index) => (
-                <ContainerButton>
+                <ContainerButton key={(index + 200)}>
                   <Book
                     image={book?.book_cover}
                     key={index}
                     showInfo={() => showInfo(book)}
                   />
-                  <ButtonDelete>
-                    <img src={iconDelete} alt="delete" />
+                  <ButtonDelete key={(index + 100)}>
+                    <img src={iconDelete} alt="delete" onClick={() => deleteBook(book.id)} />
                   </ButtonDelete>
                 </ContainerButton>
               ))}
