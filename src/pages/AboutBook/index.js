@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import InfoBook from "../../components/InfoBook";
-import {} from "./styles";
+import { useLocation } from 'react-router-dom';
+import { } from "./styles";
 
 const AboutBook = () => {
+  const info = useLocation();
+  const book = info.state;
   return (
     <>
       <div></div>
       <Header />
-      <InfoBook />
+      <InfoBook book={book} />
       <Footer />
     </>
   );

@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   ContainerBook,
   ImageBook,
@@ -7,17 +6,20 @@ import {
   DescriptionBook,
   YearBook,
 } from "./styles";
-import Image from "../../assets/Livro.jpg";
 
-const InfoBook = ({}) => {
+const InfoBook = ({ book }) => {
   return (
     <>
       <ContainerBook>
+<<<<<<< HEAD
         <ImageBook src={Image}></ImageBook>
+=======
+        <ImageBook src={book.book_cover}></ImageBook>
+>>>>>>> d35a77e39fbb1d0b23fac6119baf0523da974ea4
         <ContainerInfoBook>
-          <TitleBook>OLA</TitleBook>
-          <DescriptionBook>ODOEDe</DescriptionBook>
-          <YearBook>drddr</YearBook>
+          <TitleBook>{book.title}</TitleBook>
+          <DescriptionBook>{book.description}</DescriptionBook>
+          <YearBook>{book.year} </YearBook>
         </ContainerInfoBook>
       </ContainerBook>
     </>

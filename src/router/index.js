@@ -8,12 +8,11 @@ import Profile from "../pages/Profile";
 import AboutBook from "../pages/AboutBook";
 /* import Menu from "../components/Menu"; */
 
-const Router = ({ handleSubmit }) => {
+const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="login" element={<Login handleSubmit={handleSubmit} />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="home" element={<Home />} />

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Book from "../../components/Book";
-import { Navigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
+
 import {
   ContainerProfileAndBooks,
   ContainerProfile,
@@ -13,6 +14,7 @@ import {
 } from "./styles";
 
 const Profile = () => {
+  const navigate = useNavigate();
   const [userDtata, setUserData] = useState({});
   const [tokenValid, setTokenValid] = useState(true);
   const [userBooks, setuserBooks] = useState([]);
@@ -54,6 +56,12 @@ const Profile = () => {
     profileData();
   }, []);
 
+  function showInfo(book) {
+    navigate('../aboutbook', { state: book });
+  }
+
+
+
   return (
     <>
       {!tokenValid ? (
@@ -63,6 +71,10 @@ const Profile = () => {
       ) : (
         <>
           <Header />
+<<<<<<< HEAD
+=======
+          <ContainerPageProfile>
+>>>>>>> d35a77e39fbb1d0b23fac6119baf0523da974ea4
             <ContainerProfileAndBooks>
               <ContainerProfile> 
                   <ImageUser src={userDtata?.profile_picture} alt="User" />
@@ -71,10 +83,14 @@ const Profile = () => {
               </ContainerProfile>
               <ContainerBooksUser>
                 {userBooks.map((book, index) => (
-                  <Book image={book?.book_cover} key={index} />
+                  <Book image={book?.book_cover} key={index} showInfo={() => showInfo(book)} />
                 ))}
               </ContainerBooksUser>
             </ContainerProfileAndBooks>
+<<<<<<< HEAD
+=======
+          </ContainerPageProfile>
+>>>>>>> d35a77e39fbb1d0b23fac6119baf0523da974ea4
           <Footer />
         </>
       )}
