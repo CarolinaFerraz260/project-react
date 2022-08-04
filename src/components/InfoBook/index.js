@@ -11,7 +11,6 @@ const InfoBook = ({ book }) => {
   return (
     <>
       <ContainerBook>
-        <ImageBook src={Image}></ImageBook>
         <ImageBook src={book.book_cover}></ImageBook>
         <ContainerInfoBook>
           <TitleBook>{book.title}</TitleBook>
