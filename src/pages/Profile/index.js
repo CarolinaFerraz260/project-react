@@ -7,7 +7,6 @@ import HeaderProfile from "../../assets/headerProfile.jpg";
 import {
   ContainerPageProfile,
   ContainerImageUser,
-  ImageHeaderProfile,
   ContainerProfileAndBooks,
   ContainerProfile,
   NameUser,
@@ -70,7 +69,6 @@ const Profile = () => {
         <>
           <Header />
           <ContainerPageProfile>
-            <ImageHeaderProfile src={HeaderProfile}></ImageHeaderProfile>
             <ContainerProfileAndBooks>
               <ContainerProfile>
                 {/* Infos do user */}
