@@ -15,6 +15,7 @@ export const NameUser = styled.p`
   font-size: 24px;
   font-weight: bold;
   max-width: fit-content;
+  margin-bottom: 0;
 `;
 
 export const ContainerImageUser = styled.div`
@@ -36,6 +37,7 @@ export const EmailProfileUser = styled.p`
   font-size: 16px;
   opacity: 70%;
   width: fit-content;
+  margin-bottom: 24px;
 `;
 
 export const ContainerButtonChange = styled.div`
@@ -54,7 +56,6 @@ export const ButtonChangeProfile = styled.button`
   margin-right: 8px;
 
   &:hover {
-    opacity: 100%;
     -webkit-transform: scale(1.4);
     transform: scale(1.1);
   }
@@ -66,14 +67,18 @@ export const ContainerBooksUser = styled.div`
 `;
 
 export const ContainerButton = styled.div`
-  position: relative;
+  text-align: center;
+  margin-top: 0;
 `;
 
 export const ButtonDelete = styled.button`
   border: none;
   background-color: #fff;
   margin-bottom: 20px;
-  position: absolute;
-  right: 80px;
-  bottom: 3px;
+  margin-top: 0;
+
+  &:hover {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.3);
+  }
 `;

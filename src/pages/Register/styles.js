@@ -75,6 +75,11 @@ export const ButtonRegister = styled.button`
   border-radius: 4px;
   font-size: 18px;
   margin-bottom: 8px;
+
+  &:hover {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.1);
+  }
 `;
 
 export const ButtonLogin = styled.button`
@@ -84,4 +89,9 @@ export const ButtonLogin = styled.button`
   background: #fff5d4;
   border-radius: 4px;
   font-size: 18px;
+
+  &:hover {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.1);
+  }
 `;

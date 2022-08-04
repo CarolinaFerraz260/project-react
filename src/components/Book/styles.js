@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const ContainerBook = styled.div`
   padding: 20px;
+  padding-bottom: 0;
   width: fit-content;
 `;
 
@@ -33,4 +34,10 @@ export const ContainerButtonLike = styled.div`
 export const ButtonLike = styled.button`
   border: none;
   background-color: #fff;
+  margin-bottom: 0;
+
+  &:hover {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.3);
+  }
 `;
