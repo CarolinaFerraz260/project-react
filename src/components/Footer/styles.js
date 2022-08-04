@@ -5,6 +5,6 @@ export const ContainerFooter = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
-  margin-top: 30px;
+  margin-top: 60px;
   font-size: 15px;
 `;
