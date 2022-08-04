@@ -3,7 +3,6 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Book from "../../components/Book";
 import { Navigate } from "react-router-dom";
-import HeaderProfile from "../../assets/headerProfile.jpg";
 import {
   ContainerPageProfile,
   ContainerImageUser,

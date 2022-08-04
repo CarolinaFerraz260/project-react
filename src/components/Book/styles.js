@@ -16,6 +16,7 @@ export const ContainerImage = styled.div`
 export const ImageBook = styled.img`
   margin: 8px;
   max-width: 60%;
+  width:300px;
 `;
 
 export const ContainerButtonLike = styled.div`
