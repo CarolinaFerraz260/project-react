@@ -8,14 +8,14 @@ import MyBooks from "../pages/MyBooks";
 import Favorites from "../pages/Favorites";
 import Search from "../pages/Search";
 import Profile from "../pages/Profile";
-import Menu from "../components/Menu";
+/* import Menu from "../components/Menu"; */
 
 const Router = ({ handleSubmit }) => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Menu />} />
-        <Route path="login" element={<Login handleSubmit={handleSubmit} />} />
+        <Route path="/" element={<Home />} />
+        <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="home" element={<Home />} />
         <Route path="allBooks" element={<AllBooks />} />

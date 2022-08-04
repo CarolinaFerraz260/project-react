@@ -4,38 +4,16 @@ import React from "react";
 // import Register from "./pages/Register";
 // import Home from "./pages/Home";
 /* import Profile from "./pages/Profile"; */
+
 import Router from './router'
 
 function App() {
-  /*   const storedJwt = localStorage.getItem('token');
-    const [token, setToken] = useState(storedJwt || null); */
+  // let navigate = useNavigate();
 
-  async function loginUser(credentials) {
-    return fetch("/api/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(credentials),
-    }).then((data) => data.json());
-  }
-
-  const handleSubmit = async (e, email, password) => {
-    e.preventDefault();
-    const newToken = await loginUser({ email, password })
-      .then(data => {
-        if (data.status) {
-          return data.data.token;
-        }
-        return "";
-      });
-    document.cookie = `token=${newToken}`
-    /*     localStorage.setItem('token', newToken);
-        setToken(newToken); */
-  };
 
   return (
     <>
+
       {/* <Router /> */}
       {/* <Home /> */}
       {/* <Search /> */}
@@ -44,7 +22,7 @@ function App() {
       {/* <Login handleSubmit={handleSubmit} /> */}
       {/* <Register /> */}
       {/* <Footer /> */}
-      <Router handleSubmit={handleSubmit} />
+      <Router />
     </>
   );
 }
