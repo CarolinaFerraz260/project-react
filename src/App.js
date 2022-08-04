@@ -3,7 +3,7 @@ import React from "react";
 // import Router from "./router";
 // import Register from "./pages/Register";
 // import Home from "./pages/Home";
-import Profile from "./pages/Profile";
+/* import Profile from "./pages/Profile"; */
 import Router from './router'
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
       {/* <Home /> */}
       {/* <Search /> */}
       {/*  <Header /> */}
-      <Profile />
+      {/* <Profile /> */}
       {/* <Login handleSubmit={handleSubmit} /> */}
       {/* <Register /> */}
       {/* <Footer /> */}

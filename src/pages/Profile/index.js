@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Book from "../../components/Book";
@@ -19,11 +19,12 @@ import {
 } from "./styles";
 
 const Profile = () => {
-  const token = document.cookie.split("; ").map(a => a.split("=")).filter(([a, b]) => a === "token").flat();
+  let navigate = useNavigate();
   const [userDtata, setUserData] = useState({});
   const [tokenValid, setTokenValid] = useState(true);
-  let navigate = useNavigate();
+
   useEffect(() => {
+    const token = document.cookie.split("; ").map(a => a.split("=")).filter(([a, b]) => a === "token").flat();
     fetch(`api/user/profile`, {
       method: "get",
       headers: new Headers({
@@ -45,7 +46,7 @@ const Profile = () => {
 
   useEffect(() => {
     if (!tokenValid) navigate("../home")
-  }, [tokenValid]);
+  }, [tokenValid, navigate]);
   return (
     <>
       <Header />
@@ -54,30 +55,30 @@ const Profile = () => {
         <ImageHeaderProfile src={HeaderProfile}></ImageHeaderProfile>
         <div><img src={userDtata.profile_picture} alt="User" /></div>
         <ContainerProfileAndBooks>
-        <ContainerProfile>
-          {/* Infos do user */}
-          <NameUser>{userDtata.name}</NameUser>
-          <ContainerInfosProfile>
-            <TitleInfoProfile>Email</TitleInfoProfile>
+          <ContainerProfile>
             {/* Infos do user */}
-            <DescriptionInfoProfile>{userDtata.email}</DescriptionInfoProfile>
-          </ContainerInfosProfile>
-          <ContainerInfosProfile>
-            <TitleInfoProfile>Location</TitleInfoProfile>
-            {/* Infos do user */}
-            <DescriptionInfoProfile>Porto, Portugal</DescriptionInfoProfile>
-          </ContainerInfosProfile>
-          <ContainerInfosProfile>
-            <TitleInfoProfile>Joined</TitleInfoProfile>
-            {/* Infos do user */}
-            <DescriptionInfoProfile>June 2018</DescriptionInfoProfile>
-          </ContainerInfosProfile>
-        </ContainerProfile>
-        <ContainerBooksUser>
-          <Book image={Livro} />
-          <Book image={Livro} />
-          <Book image={Livro} />
-        </ContainerBooksUser>
+            <NameUser>{userDtata.name}</NameUser>
+            <ContainerInfosProfile>
+              <TitleInfoProfile>Email</TitleInfoProfile>
+              {/* Infos do user */}
+              <DescriptionInfoProfile>{userDtata.email}</DescriptionInfoProfile>
+            </ContainerInfosProfile>
+            <ContainerInfosProfile>
+              <TitleInfoProfile>Location</TitleInfoProfile>
+              {/* Infos do user */}
+              <DescriptionInfoProfile>Porto, Portugal</DescriptionInfoProfile>
+            </ContainerInfosProfile>
+            <ContainerInfosProfile>
+              <TitleInfoProfile>Joined</TitleInfoProfile>
+              {/* Infos do user */}
+              <DescriptionInfoProfile>June 2018</DescriptionInfoProfile>
+            </ContainerInfosProfile>
+          </ContainerProfile>
+          <ContainerBooksUser>
+            <Book image={Livro} />
+            <Book image={Livro} />
+            <Book image={Livro} />
+          </ContainerBooksUser>
         </ContainerProfileAndBooks>
       </ContainerPageProfile>
       <Footer />
