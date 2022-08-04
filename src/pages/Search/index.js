@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { ContainerBooksFilter } from "./styles";
 import SearchForm from "../../components/SearchFrom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -50,8 +51,12 @@ function Search() {
   return (
     <>
       <Header />
-      {data.map(book => <Book image={book.book_cover} />)}
       <SearchForm inputChange={inputChange} />
+      <ContainerBooksFilter>
+        {data.map((book) => (
+          <Book image={book.book_cover} />
+        ))}
+      </ContainerBooksFilter>
       <Footer />
     </>
   );

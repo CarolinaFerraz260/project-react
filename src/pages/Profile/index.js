@@ -4,36 +4,36 @@ import Footer from "../../components/Footer";
 import Book from "../../components/Book";
 import Livro from "../../assets/Livro.jpg";
 import { useNavigate } from "react-router-dom";
-// import Menu from "../../components/Menu";
 import HeaderProfile from "../../assets/headerProfile.jpg";
 import {
   ContainerPageProfile,
+  ContainerImageUser,
   ImageHeaderProfile,
   ContainerProfileAndBooks,
   ContainerProfile,
   NameUser,
   ImageUser,
   ContainerInfosProfile,
-  TitleInfoProfile,
-  DescriptionInfoProfile,
+  EmailProfileUser,
   ContainerBooksUser,
 } from "./styles";
 
 const Profile = () => {
-<<<<<<< HEAD
+  let navigate = useNavigate;
   const token = document.cookie
     .split("; ")
     .map((a) => a.split("="))
     .filter(([a, b]) => a === "token")
     .flat();
-=======
-  let navigate = useNavigate();
->>>>>>> 5b9d31328edac54364dd10a7f643f518c4034a1d
   const [userDtata, setUserData] = useState({});
   const [tokenValid, setTokenValid] = useState(true);
 
   useEffect(() => {
-    const token = document.cookie.split("; ").map(a => a.split("=")).filter(([a, b]) => a === "token").flat();
+    const token = document.cookie
+      .split("; ")
+      .map((a) => a.split("="))
+      .filter(([a, b]) => a === "token")
+      .flat();
     fetch(`api/user/profile`, {
       method: "get",
       headers: new Headers({
@@ -54,45 +54,26 @@ const Profile = () => {
   }, []);
 
   useEffect(() => {
-<<<<<<< HEAD
     if (!tokenValid) navigate("../home");
-  }, [tokenValid]);
-=======
-    if (!tokenValid) navigate("../home")
   }, [tokenValid, navigate]);
->>>>>>> 5b9d31328edac54364dd10a7f643f518c4034a1d
   return (
     <>
       <Header />
-      {/* <Menu /> */}
       <ContainerPageProfile>
         <ImageHeaderProfile src={HeaderProfile}></ImageHeaderProfile>
         <ContainerProfileAndBooks>
           <ContainerProfile>
             {/* Infos do user */}
-<<<<<<< HEAD
-            <ImageUser src={userDtata.profile_picture} alt="User" />
-=======
->>>>>>> 5b9d31328edac54364dd10a7f643f518c4034a1d
+            <ContainerImageUser>
+              {" "}
+              <ImageUser src={userDtata.profile_picture} alt="User" />
+            </ContainerImageUser>
+
             <NameUser>{userDtata.name}</NameUser>
             <ContainerInfosProfile>
-              <TitleInfoProfile>Email</TitleInfoProfile>
               {/* Infos do user */}
-              <DescriptionInfoProfile>{userDtata.email}</DescriptionInfoProfile>
+              <EmailProfileUser>{userDtata.email}</EmailProfileUser>
             </ContainerInfosProfile>
-<<<<<<< HEAD
-=======
-            <ContainerInfosProfile>
-              <TitleInfoProfile>Location</TitleInfoProfile>
-              {/* Infos do user */}
-              <DescriptionInfoProfile>Porto, Portugal</DescriptionInfoProfile>
-            </ContainerInfosProfile>
-            <ContainerInfosProfile>
-              <TitleInfoProfile>Joined</TitleInfoProfile>
-              {/* Infos do user */}
-              <DescriptionInfoProfile>June 2018</DescriptionInfoProfile>
-            </ContainerInfosProfile>
->>>>>>> 5b9d31328edac54364dd10a7f643f518c4034a1d
           </ContainerProfile>
           <ContainerBooksUser>
             <Book image={Livro} />

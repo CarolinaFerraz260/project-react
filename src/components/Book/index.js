@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   ContainerBook,
+  ContainerImage,
   ImageBook,
   ContainerButtonLike,
   ButtonLike,
@@ -23,10 +24,15 @@ const Book = ({ image }) => {
   return (
     <>
       <ContainerBook>
-        <ImageBook src={image}></ImageBook>
+        <ContainerImage>
+          <ImageBook src={image}></ImageBook>
+        </ContainerImage>
         <ContainerButtonLike>
           <ButtonLike onClick={changeImage}>
-            <img src={like ? likes.likeEnabled : likes.likeDisabled} alt="like" />
+            <img
+              src={like ? likes.likeEnabled : likes.likeDisabled}
+              alt="like"
+            />
           </ButtonLike>
         </ContainerButtonLike>
       </ContainerBook>

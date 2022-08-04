@@ -2,14 +2,15 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const ContainerMenu = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #fff;
-  border-bottom: solid 1px #fdc544;
   width: fit-content;
   margin: 20px;
 `;
 
 export const Links = styled(Link)`
-  display: block;
   padding: 8px 20px;
   margin: 8px;
   text-decoration: none;
@@ -21,7 +22,7 @@ export const Links = styled(Link)`
 
   &:hover {
     background-color: #fdc544;
-    color: #FFF3C9;
+    color: #fff3c9;
     opacity: 100%;
   }
 `;

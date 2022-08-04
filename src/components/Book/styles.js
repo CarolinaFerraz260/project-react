@@ -6,8 +6,16 @@ export const ContainerBook = styled.div`
   width: fit-content;
 `;
 
+export const ContainerImage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+`;
+
 export const ImageBook = styled.img`
   margin: 8px;
+  max-width: 50%;
 `;
 
 export const ContainerButtonLike = styled.div`
