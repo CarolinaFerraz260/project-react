@@ -13,7 +13,17 @@ export const ContainerInputAndLabel = styled.div`
   margin-right: 34px;
 `;
 
-export const InputFilter = styled.input``;
+export const InputFilter = styled.input`
+  border-radius: 50px;
+
+  &:checked {
+    background-color: #3ed;
+  }
+`;
+
+export const Span = styled.span`
+  background-color: #3ed;
+`;
 
 export const LabelFilter = styled.label`
   color: #fff;
