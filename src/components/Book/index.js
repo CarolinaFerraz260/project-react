@@ -14,7 +14,7 @@ const likes = {
   likeDisabled: iconLikeDisabled,
 };
 
-const Book = ({ image }) => {
+const Book = ({ image, showInfo }) => {
   const [like, setLike] = useState(false);
 
   const changeImage = () => {
@@ -25,7 +25,7 @@ const Book = ({ image }) => {
     <>
       <ContainerBook>
         <ContainerImage>
-          <ImageBook src={image}></ImageBook>
+          <ImageBook src={image} onClick={showInfo}></ImageBook>
         </ContainerImage>
         <ContainerButtonLike>
           <ButtonLike onClick={changeImage}>
