@@ -28,6 +28,10 @@ export const NameUser = styled.p`
   text-align: center;
 `;
 
+export const ImageUser = styled.img`
+  border-radius: 50%;
+`;
+
 export const ContainerInfosProfile = styled.div`
   padding: 0;
 `;

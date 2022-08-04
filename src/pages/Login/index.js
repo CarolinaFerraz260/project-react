@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-/* import Axios from "axios"; */
 import Image from "../../assets/main.png";
-/* import Proxy from "http-proxy-middleware"; */
+import Footer from "../../components/Footer";
 
 import {
   ContainerFormLogin,
@@ -48,6 +47,7 @@ const Login = ({ handleSubmit }) => {
           </ContainerAllButtons>
         </FormLogin>
       </ContainerFormLogin>
+      <Footer/>
     </>
   );
 };
