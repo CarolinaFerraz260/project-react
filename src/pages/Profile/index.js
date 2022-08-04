@@ -68,24 +68,22 @@ const Profile = () => {
       ) : (
         <>
           <Header />
-          <ContainerPageProfile>
-            <ContainerProfileAndBooks>
-              <ContainerProfile>
-                <ImageUser src={userDtata?.profile_picture} alt="User" />
-                <NameUser>{userDtata?.name}</NameUser>
-                <EmailProfileUser>{userDtata?.email}</EmailProfileUser>
-              </ContainerProfile>
-              <ContainerBooksUser>
-                {userBooks.map((book, index) => (
-                  <Book
-                    image={book?.book_cover}
-                    key={index}
-                    showInfo={() => showInfo(book)}
-                  />
-                ))}
-              </ContainerBooksUser>
-            </ContainerProfileAndBooks>
-          </ContainerPageProfile>
+          <ContainerProfileAndBooks>
+            <ContainerProfile>
+              <ImageUser src={userDtata?.profile_picture} alt="User" />
+              <NameUser>{userDtata?.name}</NameUser>
+              <EmailProfileUser>{userDtata?.email}</EmailProfileUser>
+            </ContainerProfile>
+            <ContainerBooksUser>
+              {userBooks.map((book, index) => (
+                <Book
+                  image={book?.book_cover}
+                  key={index}
+                  showInfo={() => showInfo(book)}
+                />
+              ))}
+            </ContainerBooksUser>
+          </ContainerProfileAndBooks>
           <Footer />
         </>
       )}
