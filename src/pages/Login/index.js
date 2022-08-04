@@ -26,6 +26,8 @@ const Login = () => {
 
   async function loginUser(credentials) {
     try {
+      console.log(credentials);
+
       const data = await fetch("/api/auth/login", {
         method: "POST",
         headers: {
@@ -33,6 +35,8 @@ const Login = () => {
         },
         body: JSON.stringify(credentials),
       });
+
+      console.log(data);
       const jsonData = await data.json();
       document.cookie = `token=${jsonData.data.token}`;
       setLogin(true);
