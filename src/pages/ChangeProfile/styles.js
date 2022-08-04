@@ -32,7 +32,10 @@ export const ContainerInputs = styled.div`
 `;
 
 export const InputChangeImage = styled.input`
-  padding: 4px;
+  color: #000;
+  font-size: 16px;
+  margin: 4px 0;
+  padding: 2px 8px;
 `;
 
 export const InputEditProfile = styled.input`

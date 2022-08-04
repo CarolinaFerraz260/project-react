@@ -31,7 +31,7 @@ const Profile = () => {
           method: "GET",
           headers: new Headers({
             "Content-Type": "application/json",
-            Authorization: token[1],
+            Authorization: token[1]
           }),
         });
 
@@ -76,7 +76,7 @@ const Profile = () => {
               <NameUser>{userDtata?.name}</NameUser>
               <EmailProfileUser>{userDtata?.email}</EmailProfileUser>
               <ContainerButtonChange>
-                <ButtonChangeProfile>Edit</ButtonChangeProfile>
+                <ButtonChangeProfile onClick={() => navigate("../changeprofile", { state: userDtata })}>Edit</ButtonChangeProfile>
               </ContainerButtonChange>
             </ContainerProfile>
             <ContainerBooksUser>
