@@ -7,6 +7,7 @@ import {
   Row,
   ContainerMenu,
   Links,
+  ButtonLogout,
 } from "./styles";
 // import { Link } from "react-router-dom";
 // import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
@@ -29,7 +30,7 @@ function Header() {
             <a title="Your Profile" href="/">
               <ProfileIcon src={profile} alt="Profile icon" />
             </a>
-            <Links>Logout</Links>
+            <ButtonLogout>Logout</ButtonLogout>
           </ContainerMenu>
         </ContainerLinks>
       </header>

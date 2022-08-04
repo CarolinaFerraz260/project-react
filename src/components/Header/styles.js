@@ -42,7 +42,24 @@ export const ContainerMenu = styled.div`
   margin: 20px;
 `;
 
-export const Links = styled.button`
+export const Links = styled(Link)`
+  padding: 8px 20px;
+  margin: 8px;
+  text-decoration: none;
+  font-family: "Anton", sans-serif;
+  font-style: bold;
+  color: #000;
+  opacity: 80%;
+
+  &:hover {
+    color: #fdc544;
+    opacity: 100%;
+    -webkit-transform: scale(1.4);
+    transform: scale(1.3);
+  }
+`;
+
+export const ButtonLogout = styled.button`
   padding: 8px 20px;
   margin: 8px;
   text-decoration: none;
@@ -58,6 +75,6 @@ export const Links = styled.button`
     color: #fdc544;
     opacity: 100%;
     -webkit-transform: scale(1.4);
-    transform: scale(1.3);
+    transform: scale(1.2);
   }
 `;
