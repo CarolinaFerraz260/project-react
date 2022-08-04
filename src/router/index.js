@@ -10,12 +10,12 @@ import Search from "../pages/Search";
 import Profile from "../pages/Profile";
 import Menu from "../components/Menu";
 
-const Router = () => {
+const Router = ({ handleSubmit }) => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Menu />} />
-        <Route path="login" element={<Login />} />
+        <Route path="login" element={<Login handleSubmit={handleSubmit} />} />
         <Route path="register" element={<Register />} />
         <Route path="home" element={<Home />} />
         <Route path="allBooks" element={<AllBooks />} />
