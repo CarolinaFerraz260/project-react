@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SearchForm from "../../components/SearchFrom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-
+import Book from "../../components/Book";
 function Search() {
   const [tags, setTags] = useState(new Set());
   const [data, setData] = useState([]);
@@ -50,6 +50,7 @@ function Search() {
   return (
     <>
       <Header />
+      {data.map(book => <Book image={book.book_cover} />)}
       <SearchForm inputChange={inputChange} />
       <Footer />
     </>
