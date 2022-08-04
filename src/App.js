@@ -1,6 +1,13 @@
 // import Login from "./pages/Login";
 import React from "react";
+<<<<<<< HEAD
 import Profile from "./pages/Profile";
+=======
+// import Router from "./router";
+// import Register from "./pages/Register";
+// import Home from "./pages/Home";
+/* import Profile from "./pages/Profile"; */
+>>>>>>> 5b9d31328edac54364dd10a7f643f518c4034a1d
 import Router from './router'
 
 function App() {
@@ -33,7 +40,15 @@ function App() {
 
   return (
     <>
+<<<<<<< HEAD
       <Profile />
+=======
+      {/* <Router /> */}
+      {/* <Home /> */}
+      {/* <Search /> */}
+      {/*  <Header /> */}
+      {/* <Profile /> */}
+>>>>>>> 5b9d31328edac54364dd10a7f643f518c4034a1d
       {/* <Login handleSubmit={handleSubmit} /> */}
       <Router handleSubmit={handleSubmit} />
     </>

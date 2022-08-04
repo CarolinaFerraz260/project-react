@@ -20,15 +20,20 @@ import {
 } from "./styles";
 
 const Profile = () => {
+<<<<<<< HEAD
   const token = document.cookie
     .split("; ")
     .map((a) => a.split("="))
     .filter(([a, b]) => a === "token")
     .flat();
+=======
+  let navigate = useNavigate();
+>>>>>>> 5b9d31328edac54364dd10a7f643f518c4034a1d
   const [userDtata, setUserData] = useState({});
   const [tokenValid, setTokenValid] = useState(true);
-  let navigate = useNavigate();
+
   useEffect(() => {
+    const token = document.cookie.split("; ").map(a => a.split("=")).filter(([a, b]) => a === "token").flat();
     fetch(`api/user/profile`, {
       method: "get",
       headers: new Headers({
@@ -49,8 +54,13 @@ const Profile = () => {
   }, []);
 
   useEffect(() => {
+<<<<<<< HEAD
     if (!tokenValid) navigate("../home");
   }, [tokenValid]);
+=======
+    if (!tokenValid) navigate("../home")
+  }, [tokenValid, navigate]);
+>>>>>>> 5b9d31328edac54364dd10a7f643f518c4034a1d
   return (
     <>
       <Header />
@@ -60,13 +70,29 @@ const Profile = () => {
         <ContainerProfileAndBooks>
           <ContainerProfile>
             {/* Infos do user */}
+<<<<<<< HEAD
             <ImageUser src={userDtata.profile_picture} alt="User" />
+=======
+>>>>>>> 5b9d31328edac54364dd10a7f643f518c4034a1d
             <NameUser>{userDtata.name}</NameUser>
             <ContainerInfosProfile>
               <TitleInfoProfile>Email</TitleInfoProfile>
               {/* Infos do user */}
               <DescriptionInfoProfile>{userDtata.email}</DescriptionInfoProfile>
             </ContainerInfosProfile>
+<<<<<<< HEAD
+=======
+            <ContainerInfosProfile>
+              <TitleInfoProfile>Location</TitleInfoProfile>
+              {/* Infos do user */}
+              <DescriptionInfoProfile>Porto, Portugal</DescriptionInfoProfile>
+            </ContainerInfosProfile>
+            <ContainerInfosProfile>
+              <TitleInfoProfile>Joined</TitleInfoProfile>
+              {/* Infos do user */}
+              <DescriptionInfoProfile>June 2018</DescriptionInfoProfile>
+            </ContainerInfosProfile>
+>>>>>>> 5b9d31328edac54364dd10a7f643f518c4034a1d
           </ContainerProfile>
           <ContainerBooksUser>
             <Book image={Livro} />
