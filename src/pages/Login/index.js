@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "../../assets/main.png";
-import { Navigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 import Footer from "../../components/Footer";
 import potato from "../../assets/beautifulpotato.png";
 import { Link } from "react-router-dom";
@@ -19,6 +19,7 @@ import {
 } from "./styles";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [email, setUserName] = useState();
   const [password, setPassword] = useState();
   const [login, setLogin] = useState(false);
@@ -46,6 +47,10 @@ const Login = () => {
   async function handleSubmit(e, email, password) {
     e.preventDefault();
     await loginUser({ email, password });
+  }
+
+  function registerButton() {
+    navigate("../register")
   }
 
   return (
@@ -88,7 +93,7 @@ const Login = () => {
                 </ContainerButton>
                 <ContainerButton>
                   {" "}
-                  <ButtonRegister type="submit">Register</ButtonRegister>
+                  <ButtonRegister type="button" onClick={registerButton}>Register</ButtonRegister>
                 </ContainerButton>
               </ContainerAllButtons>
             </FormLogin>
