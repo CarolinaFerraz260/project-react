@@ -34,7 +34,7 @@ const Profile = () => {
           method: "GET",
           headers: new Headers({
             "Content-Type": "application/json",
-            Authorization: token[1]
+            Authorization: token[1],
           }),
         });
 
@@ -79,7 +79,14 @@ const Profile = () => {
               <NameUser>{userDtata?.name}</NameUser>
               <EmailProfileUser>{userDtata?.email}</EmailProfileUser>
               <ContainerButtonChange>
-                <ButtonChangeProfile onClick={() => navigate("../changeprofile", { state: userDtata })}>Edit</ButtonChangeProfile>
+                <ButtonChangeProfile
+                  onClick={() =>
+                    navigate("../changeprofile", { state: userDtata })
+                  }
+                >
+                  Edit
+                </ButtonChangeProfile>
+                <ButtonChangeProfile>Add book</ButtonChangeProfile>
               </ContainerButtonChange>
             </ContainerProfile>
             <ContainerBooksUser>
@@ -90,9 +97,9 @@ const Profile = () => {
                     key={index}
                     showInfo={() => showInfo(book)}
                   />
-                    <ButtonDelete>
-                      <img src={iconDelete} alt="delete" />
-                    </ButtonDelete>
+                  <ButtonDelete>
+                    <img src={iconDelete} alt="delete" />
+                  </ButtonDelete>
                 </ContainerButton>
               ))}
             </ContainerBooksUser>

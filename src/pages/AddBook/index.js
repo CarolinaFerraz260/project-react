@@ -7,13 +7,14 @@ import {
   ContainerImageBook,
   InputChangeImage,
   ContainerInputs,
+  InputEditBookDescription,
   InputEditBook,
   ImageBook,
-  ContainerButtonSave,
-  ButtonSaveBook,
+  ContainerButtonAdd,
+  ButtonAddBook,
 } from "./styles";
 
-const ChangeBook = () => {
+const AddBook = () => {
   return (
     <>
       <Header />
@@ -32,7 +33,7 @@ const ChangeBook = () => {
               name="titleBook"
               type="text"
             />
-            <InputEditBook
+            <InputEditBookDescription
               placeholder="Book description"
               name="descriptionBook"
               type="text"
@@ -45,12 +46,13 @@ const ChangeBook = () => {
           </ContainerInputs>
         </ContainerInfosBook>
       </ContainerBook>
-      <ContainerButtonSave>
-        <ButtonSaveBook>Save</ButtonSaveBook>
-      </ContainerButtonSave>
+      <ContainerButtonAdd>
+        <ButtonAddBook>Add</ButtonAddBook>
+      </ContainerButtonAdd>
       <Footer />
     </>
   );
 };
 
-export default ChangeBook;
+export default AddBook;
+

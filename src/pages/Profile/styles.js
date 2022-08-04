@@ -6,7 +6,7 @@ export const ContainerProfileAndBooks = styled.div`
 
 export const ContainerProfile = styled.div`
   max-width: 10%;
-  margin: 0px 24px;
+  margin: 8px 24px;
 `;
 
 export const NameUser = styled.p`
@@ -51,6 +51,7 @@ export const ButtonChangeProfile = styled.button`
   padding: 8px 20px;
   text-transform: uppercase;
   font-weight: bold;
+  margin-right: 8px;
 
   &:hover {
     opacity: 100%;
