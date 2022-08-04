@@ -8,7 +8,7 @@ import Profile from "../pages/Profile";
 import AboutBook from "../pages/AboutBook";
 /* import Menu from "../components/Menu"; */
 
-const Router = ({ showInfo }) => {
+const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -17,7 +17,7 @@ const Router = ({ showInfo }) => {
         <Route path="register" element={<Register />} />
         <Route path="home" element={<Home />} />
         <Route path="search" element={<Search />} />
-        <Route path="profile" element={<Profile showInfo={showInfo} />} />
+        <Route path="profile" element={<Profile />} />
         <Route path="aboutbook" element={<AboutBook />} />
       </Routes>
     </BrowserRouter>

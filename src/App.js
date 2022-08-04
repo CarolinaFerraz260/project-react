@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       {/* <Login handleSubmit={handleSubmit} /> */}
-      <Router showInfo={showInfo} />
+      <Router />
     </>
   );
 }
