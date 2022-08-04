@@ -1,8 +1,7 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import InfoBook from "../../components/InfoBook";
-import { useLocation } from 'react-router-dom';
-import { } from "./styles";
+import { useLocation } from "react-router-dom";
 
 const AboutBook = () => {
   const info = useLocation();
