@@ -19,21 +19,18 @@ function Header() {
     <>
       <header>
         <ContainerLinks>
-          <a title="Home Page" href="/">
+          <Links title="Home Page" to="/">
             <Logo src={potato} alt="logo" />
-          </a>
+          </Links>
           <ContainerMenu>
-            <Links to="/myBooks">My Books</Links>
-            <Links to="/myBooks">Logout</Links>
-          </ContainerMenu>
-          <div>
             <a title="Search" href="/search">
               <SearchIcon src={search} alt="Search icon" />
             </a>
             <a title="Your Profile" href="/">
               <ProfileIcon src={profile} alt="Profile icon" />
             </a>
-          </div>
+            <Links>Logout</Links>
+          </ContainerMenu>
         </ContainerLinks>
       </header>
       <Row />

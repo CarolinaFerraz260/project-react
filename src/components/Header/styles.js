@@ -3,10 +3,6 @@ import { Link } from "react-router-dom";
 
 export const Logo = styled.img`
   height: 50px;
-  &:hover {
-    -webkit-transform: scale(1.4);
-    transform: scale(1.3);
-  }
 `;
 
 export const ContainerLinks = styled.nav`
@@ -46,7 +42,7 @@ export const ContainerMenu = styled.div`
   margin: 20px;
 `;
 
-export const Links = styled(Link)`
+export const Links = styled.button`
   padding: 8px 20px;
   margin: 8px;
   text-decoration: none;
@@ -54,6 +50,9 @@ export const Links = styled(Link)`
   font-style: bold;
   color: #000;
   opacity: 80%;
+  background-color: #fff;
+  border: none;
+  font-size: 18px;
 
   &:hover {
     color: #fdc544;

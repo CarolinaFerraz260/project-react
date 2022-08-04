@@ -6,15 +6,29 @@ import Book from "../../components/Book";
 import Livro from "../../assets/Livro.jpg";
 import Livro2 from "../../assets/Livro2.jpg";
 import Livro3 from "../../assets/Livro3.jpg";
+import Livro4 from "../../assets/Livro4.jpg";
+import Livro5 from "../../assets/Livro5.jpg";
 
 const Home = () => {
   return (
     <>
       <Header />
       <ContainerBooks>
-        {/* TODO colocar o livro correto aparecer */}
         <Book image={Livro}></Book>
         <Book image={Livro2}></Book>
+        <Book image={Livro3}></Book>
+        <Book image={Livro4}></Book>
+      </ContainerBooks>
+      <ContainerBooks>
+        <Book image={Livro5}></Book>
+        <Book image={Livro2}></Book>
+        <Book image={Livro3}></Book>
+        <Book image={Livro3}></Book>
+      </ContainerBooks>
+      <ContainerBooks>
+        <Book image={Livro}></Book>
+        <Book image={Livro2}></Book>
+        <Book image={Livro3}></Book>
         <Book image={Livro3}></Book>
       </ContainerBooks>
       <Footer />
