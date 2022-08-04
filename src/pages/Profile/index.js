@@ -3,7 +3,6 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Book from "../../components/Book";
 import { Navigate, useNavigate } from "react-router-dom";
-
 import {
   ContainerProfileAndBooks,
   ContainerProfile,
@@ -57,10 +56,8 @@ const Profile = () => {
   }, []);
 
   function showInfo(book) {
-    navigate('../aboutbook', { state: book });
+    navigate("../aboutbook", { state: book });
   }
-
-
 
   return (
     <>
@@ -71,26 +68,24 @@ const Profile = () => {
       ) : (
         <>
           <Header />
-<<<<<<< HEAD
-=======
           <ContainerPageProfile>
->>>>>>> d35a77e39fbb1d0b23fac6119baf0523da974ea4
             <ContainerProfileAndBooks>
-              <ContainerProfile> 
-                  <ImageUser src={userDtata?.profile_picture} alt="User" />
+              <ContainerProfile>
+                <ImageUser src={userDtata?.profile_picture} alt="User" />
                 <NameUser>{userDtata?.name}</NameUser>
-                  <EmailProfileUser>{userDtata?.email}</EmailProfileUser>
+                <EmailProfileUser>{userDtata?.email}</EmailProfileUser>
               </ContainerProfile>
               <ContainerBooksUser>
                 {userBooks.map((book, index) => (
-                  <Book image={book?.book_cover} key={index} showInfo={() => showInfo(book)} />
+                  <Book
+                    image={book?.book_cover}
+                    key={index}
+                    showInfo={() => showInfo(book)}
+                  />
                 ))}
               </ContainerBooksUser>
             </ContainerProfileAndBooks>
-<<<<<<< HEAD
-=======
           </ContainerPageProfile>
->>>>>>> d35a77e39fbb1d0b23fac6119baf0523da974ea4
           <Footer />
         </>
       )}
