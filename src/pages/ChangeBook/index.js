@@ -3,6 +3,7 @@ import Footer from "../../components/Footer";
 import Livro from "../../assets/Livro.jpg";
 import {
   ContainerBook,
+
   ContainerInfosBook,
   ContainerImageBook,
   InputChangeImage,
@@ -59,11 +60,11 @@ const ChangeBook = () => {
   return (
     <>
       <Header />
-      <ContainerProfile>
-        <ContainerInfosUser onSubmit={updateBook}>
-          <ContainerImageUser>
-            <ImageUser src={book.book_cover} />
-          </ContainerImageUser>
+      <ContainerBook>
+        <ContainerInfosBook onSubmit={updateBook}>
+          <ContainerImageBook>
+            <ImageBook src={book.book_cover} />
+          </ContainerImageBook>
           <ContainerInputs>
             <label>
               <InputChangeImage name="imageBook" type="text" placeholder="Book url" id="old_book_url"></InputChangeImage>
@@ -88,11 +89,10 @@ const ChangeBook = () => {
             />
           </ContainerInputs>
           <ContainerButtonSave>
-            <ButtonSaveProfile>Save</ButtonSaveProfile>
+            <ButtonSaveBook>Save</ButtonSaveBook>
           </ContainerButtonSave>
-        </ContainerInfosUser>
-      </ContainerProfile>
-
+        </ContainerInfosBook>
+      </ContainerBook>
       <Footer />
     </>
   );
