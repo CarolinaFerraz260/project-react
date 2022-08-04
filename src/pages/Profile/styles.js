@@ -4,18 +4,13 @@ export const ContainerPageProfile = styled.div`
   flex-wrap: wrap;
 `;
 
-export const ImageHeaderProfile = styled.img`
-  min-width: 100%;
-`;
-
 export const ContainerProfileAndBooks = styled.div`
   display: flex;
 `;
 
 export const ContainerProfile = styled.div`
   background-color: #fff3c9;
-  width: fit-content;
-  padding: 20px 60px;
+  max-width: 12%;
 `;
 
 export const NameUser = styled.p`
@@ -32,8 +27,9 @@ export const ContainerImageUser = styled.div`
 `;
 
 export const ImageUser = styled.img`
+  margin-top: 16px;
   border-radius: 50%;
-  max-width: 50%;
+  min-width: 20%;
 `;
 
 export const ContainerInfosProfile = styled.div`

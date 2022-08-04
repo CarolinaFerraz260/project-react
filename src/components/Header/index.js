@@ -20,7 +20,7 @@ function Header() {
   const navigate = useNavigate()
   function logout() {
     document.cookie = "token=";
-    navigate("../home")
+    navigate("../login")
   }
   return (
     <>
@@ -33,7 +33,7 @@ function Header() {
             <a title="Search" href="/search">
               <SearchIcon src={search} alt="Search icon" />
             </a>
-            <a title="Your Profile" href="/">
+            <a title="Your Profile" href="/profile">
               <ProfileIcon src={profile} alt="Profile icon" />
             </a>
             <ButtonLogout onClick={logout}>Logout</ButtonLogout>

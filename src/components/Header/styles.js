@@ -31,6 +31,7 @@ export const ProfileIcon = styled.img`
 
 export const Row = styled.hr`
   border: 1px solid #fdc544;
+  margin-bottom: 0;
 `;
 
 export const ContainerMenu = styled.div`
