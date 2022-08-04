@@ -15,6 +15,7 @@ export const NameUser = styled.p`
   font-size: 24px;
   font-weight: bold;
   max-width: fit-content;
+  margin-bottom: 0;
 `;
 
 export const ContainerImageUser = styled.div`
@@ -36,6 +37,7 @@ export const EmailProfileUser = styled.p`
   font-size: 16px;
   opacity: 70%;
   width: fit-content;
+  margin-bottom: 24px;
 `;
 
 export const ContainerButtonChange = styled.div`
