@@ -19,7 +19,6 @@ const InfoBook = ({ book }) => {
           {" "}
           <ButtonBack> ◀</ButtonBack>
         </ContainerButtonBack>
-
         <div>
           <ImageBook src={book.book_cover}></ImageBook>
           <ContainerButtonChange>
