@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   ContainerLinks,
   Logo,
@@ -16,6 +17,11 @@ import search from "../../assets/search.svg";
 import potato from "../../assets/beautifulpotato.png";
 
 function Header() {
+  const navigate = useNavigate()
+  function logout() {
+    document.cookie = "token=";
+    navigate("../home")
+  }
   return (
     <>
       <header>
@@ -30,7 +36,7 @@ function Header() {
             <a title="Your Profile" href="/">
               <ProfileIcon src={profile} alt="Profile icon" />
             </a>
-            <ButtonLogout>Logout</ButtonLogout>
+            <ButtonLogout onClick={logout}>Logout</ButtonLogout>
           </ContainerMenu>
         </ContainerLinks>
       </header>
