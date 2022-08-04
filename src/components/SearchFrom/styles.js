@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContainerFilter = styled.form`
+export const ContainerForm = styled.form`
   background-color: #fdc544;
   display: flex;
   justify-content: center;

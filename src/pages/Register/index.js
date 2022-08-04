@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import {
-  ContainerFormLogin,
-  FormLogin,
+  ContainerLogo,
+  Logo,
+  ContainerFormRegister,
+  FormRegister,
   InputProfile,
   ContainerImage,
   ImageRegister,
@@ -12,6 +14,7 @@ import {
 } from "./styles";
 import Image from "../../assets/register.jpg";
 import Footer from "../../components/Footer";
+import potato from "../../assets/beautifulpotato.png";
 
 const Register = () => {
   const [name, setUserName] = useState();
@@ -49,8 +52,12 @@ const Register = () => {
 
   return (
     <>
-      <ContainerFormLogin>
-        <FormLogin onSubmit={(e) => handleSubmit(e, email, password, name)}>
+      <ContainerLogo>
+        {" "}
+        <Logo src={potato} alt="logo" />
+      </ContainerLogo>
+      <ContainerFormRegister>
+        <FormRegister onSubmit={(e) => handleSubmit(e, email, password, name)}>
           <ContainerImage>
             <ImageRegister src={Image} alt="User" />
           </ContainerImage>
@@ -81,8 +88,8 @@ const Register = () => {
               <ButtonLogin type="submit">Login</ButtonLogin>
             </ContainerButton>
           </ContainerAllButtons>
-        </FormLogin>
-      </ContainerFormLogin>
+        </FormRegister>
+      </ContainerFormRegister>
       <div>{message}</div>
       <Footer />
     </>

@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  ContainerFilter,
+    ContainerForm,
   ContainerInputAndLabel,
   InputFilter,
   LabelFilter,
@@ -9,7 +9,7 @@ import {
 function SearchForm({ inputChange }) {
   return (
     <>
-      <ContainerFilter>
+      <ContainerForm>
         <ContainerInputAndLabel>
           <LabelFilter>
             <InputFilter
@@ -70,7 +70,7 @@ function SearchForm({ inputChange }) {
             By Id
           </LabelFilter>
         </ContainerInputAndLabel>
-      </ContainerFilter>
+      </ContainerForm>
     </>
   );
 }

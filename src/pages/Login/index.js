@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import Image from "../../assets/main.png";
-import { Navigate } from 'react-router-dom';
+import { Navigate } from "react-router-dom";
 import Footer from "../../components/Footer";
+import potato from "../../assets/beautifulpotato.png";
 
 import {
+  ContainerLogo,
+  Logo,
   ContainerFormLogin,
   FormLogin,
   InputProfile,
@@ -18,7 +21,7 @@ const Login = () => {
   const [email, setUserName] = useState();
   const [password, setPassword] = useState();
   const [login, setLogin] = useState(false);
-  const [errMessage, setErrMessage] = useState('');
+  const [errMessage, setErrMessage] = useState("");
 
   async function loginUser(credentials) {
     try {
@@ -28,7 +31,7 @@ const Login = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(credentials),
-      })
+      });
       const jsonData = await data.json();
       document.cookie = `token=${jsonData.data.token}`;
       setLogin(true);
@@ -41,18 +44,21 @@ const Login = () => {
 
   async function handleSubmit(e, email, password) {
     e.preventDefault();
-    await loginUser({ email, password })
-  };
-
+    await loginUser({ email, password });
+  }
 
   return (
     <>
+      <ContainerLogo>
+        {" "}
+        <Logo src={potato} alt="logo" />
+      </ContainerLogo>
 
-      {login ?
+      {login ? (
         <div>
           <Navigate to="../home" replace={true} />
         </div>
-        :
+      ) : (
         <>
           <div>{errMessage}</div>
           <ContainerFormLogin>
@@ -85,7 +91,7 @@ const Login = () => {
           </ContainerFormLogin>
           <Footer />
         </>
-      }
+      )}
     </>
   );
 };

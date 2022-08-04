@@ -1,12 +1,28 @@
 import styled from "styled-components";
 
+export const ContainerLogo = styled.div`
+  border-bottom: 1px solid #fdc544;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0px;
+`;
+
+export const Logo = styled.img`
+  height: 100px;
+  &:hover {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.3);
+  }
+`;
+
 export const ContainerFormLogin = styled.div`
   display: flex;
   justify-content: center;
 `;
 
 export const FormLogin = styled.form`
-  margin: 20px 200px;
+  margin: 40px 0px;
   background: #ffffff;
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.1);
   border-radius: 8px;

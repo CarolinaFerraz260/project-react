@@ -10,8 +10,8 @@ export const Logo = styled.img`
 `;
 
 export const ContainerLinks = styled.nav`
-  margin: 8px 20px;
-  padding: 8px 40px;
+  margin: 0px 20px;
+  padding: 0px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
