@@ -9,6 +9,8 @@ import {
   NameUser,
   ImageUser,
   EmailProfileUser,
+  ContainerButtonChange,
+  ButtonChangeProfile,
   ContainerBooksUser,
 } from "./styles";
 
@@ -73,6 +75,9 @@ const Profile = () => {
               <ImageUser src={userDtata?.profile_picture} alt="User" />
               <NameUser>{userDtata?.name}</NameUser>
               <EmailProfileUser>{userDtata?.email}</EmailProfileUser>
+              <ContainerButtonChange>
+                <ButtonChangeProfile>Change</ButtonChangeProfile>
+              </ContainerButtonChange>
             </ContainerProfile>
             <ContainerBooksUser>
               {userBooks.map((book, index) => (

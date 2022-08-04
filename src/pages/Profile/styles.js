@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const ContainerProfileAndBooks = styled.div`
   display: flex;
 `;
@@ -19,7 +18,7 @@ export const NameUser = styled.p`
 `;
 
 export const ContainerImageUser = styled.div`
-  max-width:fit-content;
+  max-width: fit-content;
 `;
 
 export const ImageUser = styled.img`
@@ -37,6 +36,27 @@ export const EmailProfileUser = styled.p`
   font-size: 16px;
   opacity: 70%;
   width: fit-content;
+`;
+
+export const ContainerButtonChange = styled.div`
+  display: flex;
+  justify-content: left;
+`;
+
+export const ButtonChangeProfile = styled.button`
+  background-color: #fdc544;
+  color: #fff;
+  border-radius: 16px;
+  border: none;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  &:hover {
+    opacity: 100%;
+    -webkit-transform: scale(1.4);
+    transform: scale(1.1);
+  }
 `;
 
 export const ContainerBooksUser = styled.div`
