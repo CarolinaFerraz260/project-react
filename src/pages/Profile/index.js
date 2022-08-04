@@ -76,7 +76,7 @@ const Profile = () => {
               <NameUser>{userDtata?.name}</NameUser>
               <EmailProfileUser>{userDtata?.email}</EmailProfileUser>
               <ContainerButtonChange>
-                <ButtonChangeProfile>Change</ButtonChangeProfile>
+                <ButtonChangeProfile>Edit</ButtonChangeProfile>
               </ContainerButtonChange>
             </ContainerProfile>
             <ContainerBooksUser>

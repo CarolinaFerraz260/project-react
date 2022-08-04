@@ -4,7 +4,6 @@ import { useNavigate, Navigate } from "react-router-dom";
 import Footer from "../../components/Footer";
 import potato from "../../assets/beautifulpotato.png";
 import { Link } from "react-router-dom";
-
 import {
   ContainerLogo,
   Logo,

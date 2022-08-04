@@ -6,7 +6,8 @@ import Home from "../pages/Home";
 import Search from "../pages/Search";
 import Profile from "../pages/Profile";
 import AboutBook from "../pages/AboutBook";
-/* import Menu from "../components/Menu"; */
+import ChangeBook from "../pages/ChangeBook";
+import ChangeProfile from "../pages/ChangeProfile";
 
 const Router = () => {
   return (
@@ -19,6 +20,8 @@ const Router = () => {
         <Route path="search" element={<Search />} />
         <Route path="profile" element={<Profile />} />
         <Route path="aboutbook" element={<AboutBook />} />
+        <Route path="changebook" element={<ChangeBook />} />
+        <Route path="changeprofile" element={<ChangeProfile />} />
       </Routes>
     </BrowserRouter>
   );
