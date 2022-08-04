@@ -5,6 +5,7 @@ import Register from "../pages/Register";
 import Home from "../pages/Home";
 import Search from "../pages/Search";
 import Profile from "../pages/Profile";
+import AboutBook from "../pages/AboutBook";
 /* import Menu from "../components/Menu"; */
 
 const Router = ({ handleSubmit }) => {
@@ -18,6 +19,7 @@ const Router = ({ handleSubmit }) => {
         <Route path="home" element={<Home />} />
         <Route path="search" element={<Search />} />
         <Route path="profile" element={<Profile />} />
+        <Route path="aboutbook" element={<AboutBook />} />
       </Routes>
     </BrowserRouter>
   );
