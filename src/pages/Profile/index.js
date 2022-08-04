@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Book from "../../components/Book";
-import Livro from "../../assets/Livro.jpg";
 import { useNavigate } from "react-router-dom";
 import HeaderProfile from "../../assets/headerProfile.jpg";
 import {
@@ -22,35 +21,49 @@ const Profile = () => {
   let navigate = useNavigate;
   const [userDtata, setUserData] = useState({});
   const [tokenValid, setTokenValid] = useState(true);
-
+  const [userBooks, setuserBooks] = useState([]);
   useEffect(() => {
-    const token = document.cookie
-      .split("; ")
-      .map((a) => a.split("="))
-      .filter(([a, b]) => a === "token")
-      .flat();
-    fetch(`api/user/profile`, {
-      method: "get",
-      headers: new Headers({
-        "Content-Type": "application/json",
-        Authorization: token[1],
-      }),
-    })
-      .then((response) => {
-        if (response.ok) {
-          setTokenValid(true);
-          return response.json();
-        }
+
+    async function profileData() {
+      const token = document.cookie
+        .split("; ")
+        .map((a) => a.split("="))
+        .filter(([a, b]) => a === "token")
+        .flat();
+      try {
+        const response = await fetch(`api/user/profile`, {
+          method: "get",
+          headers: new Headers({
+            "Content-Type": "application/json",
+            Authorization: token[1],
+          }),
+        })
+        const jsonResponse = await response.json();
+        setTokenValid(true);
+        setUserData(jsonResponse.data)
+        const booksResponse = await fetch(`api/book`, {
+          method: "get",
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+        const jsonBooksResponse = await booksResponse.json();
+        const userBooksData = jsonBooksResponse.data.filter(book => book.user.id === jsonResponse.data.id)
+        setuserBooks(userBooksData);
+
+      } catch (err) {
         setTokenValid(false);
-        throw new Error("No Auth");
-      })
-      .then((json) => setUserData(json.data))
-      .catch((a) => console.error(a.message));
+        console.error(err.message);
+      }
+    }
+    profileData();
   }, []);
 
   useEffect(() => {
+    console.log(userDtata)
     if (!tokenValid) navigate("../home");
-  }, [tokenValid, navigate]);
+  }, [tokenValid, navigate, userDtata]);
+
   return (
     <>
       <Header />
@@ -69,17 +82,15 @@ const Profile = () => {
               {/* Infos do user */}
               <EmailProfileUser>{userDtata.email}</EmailProfileUser>
             </ContainerInfosProfile>
-          </ContainerProfile>
+          </ContainerProfile >
           <ContainerBooksUser>
-            <Book image={Livro} />
-            <Book image={Livro} />
-            <Book image={Livro} />
+            {userBooks.map(book => <Book image={book.book_cover} />)}
           </ContainerBooksUser>
-        </ContainerProfileAndBooks>
-      </ContainerPageProfile>
+        </ContainerProfileAndBooks >
+      </ContainerPageProfile >
       <Footer />
     </>
   );
-};
+}
 
 export default Profile;
