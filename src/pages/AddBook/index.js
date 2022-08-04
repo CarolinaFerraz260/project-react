@@ -1,6 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Livro from "../../assets/Livro.jpg";
+import Livro from "../../assets/addbooks.jpg";
 import {
   ContainerBook,
   ContainerInfosBook,
