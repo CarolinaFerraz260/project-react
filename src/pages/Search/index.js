@@ -36,14 +36,15 @@ function Search() {
     setTags(newArr);
   }
 
+
   return (
     <>
       <Header />
       <SearchForm inputChange={inputChange} />
       <ContainerBooksFilter>
-        {data.map((book, index) => (
-          <Book image={book.book_cover} key={index} />
-        ))}
+        {data.map((book, index) =>
+          <Book image={book.book_cover} title={book.title} key={index} />
+        )}
       </ContainerBooksFilter>
       <Footer />
     </>

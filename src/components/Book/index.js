@@ -15,17 +15,16 @@ const likes = {
   likeDisabled: iconLikeDisabled,
 };
 
-const Book = ({ image, showInfo }) => {
+const Book = ({ image, title, showInfo }) => {
   const [like, setLike] = useState(false);
 
   const changeImage = () => {
     setLike((state) => !state);
   };
-
   return (
     <>
       <ContainerBook>
-        <TitleBook>Ola</TitleBook>
+        <TitleBook>{title}</TitleBook>
         <ContainerImage>
           <ImageBook src={image} onClick={showInfo}></ImageBook>
         </ContainerImage>
