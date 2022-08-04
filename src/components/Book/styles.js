@@ -31,13 +31,4 @@ export const ContainerButtonLike = styled.div`
   flex-direction: row;
 `;
 
-export const ButtonLike = styled.button`
-  border: none;
-  background-color: #fff;
-  margin-bottom: 0;
 
-  &:hover {
-    -webkit-transform: scale(1.4);
-    transform: scale(1.3);
-  }
-`;

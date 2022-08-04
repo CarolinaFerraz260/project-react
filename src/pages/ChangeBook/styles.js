@@ -20,7 +20,6 @@ export const ContainerImageBook = styled.div`
 
 export const ImageBook = styled.img`
   margin-top: 16px;
-  border-radius: 50%;
   max-width: 80%;
 `;
 

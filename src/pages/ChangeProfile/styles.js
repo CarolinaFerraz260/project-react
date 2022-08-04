@@ -20,7 +20,6 @@ export const ContainerImageUser = styled.div`
 
 export const ImageUser = styled.img`
   margin-top: 16px;
-  border-radius: 50%;
   max-width: 80%;
 `;
 
