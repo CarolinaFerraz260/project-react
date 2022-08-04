@@ -16,6 +16,7 @@
     "styled-components": "^5.3.5",
     "token": "^0.1.0"
   },
+  "proxy": "https://ancient-temple-61124.herokuapp.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
