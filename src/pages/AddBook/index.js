@@ -13,8 +13,9 @@ import {
   ContainerButtonAdd,
   ButtonAddBook,
 } from "./styles";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import React, { useEffect } from "react";
+
 const AddBook = () => {
   const navigate = useNavigate();
   const token = document.cookie
@@ -24,7 +25,7 @@ const AddBook = () => {
     .flat();
   useEffect(() => {
     if (token[1] === "") {
-      navigate("../home")
+      navigate("../home");
     } else {
       document.querySelector("#add_book_cover").value = "";
       document.querySelector("#add_book_title").value = "";
@@ -38,30 +39,28 @@ const AddBook = () => {
 
     const newUrl = e.target.querySelector("#add_book_cover").value;
     const newTitle = e.target.querySelector("#add_book_title").value;
-    const newDescription = e.target.querySelector("#add_book_description").value;
+    const newDescription = e.target.querySelector(
+      "#add_book_description"
+    ).value;
     const newYear = e.target.querySelector("#add_book_number").value;
     const newBook = {
       title: newTitle,
       description: newDescription,
-      year: Number(newYear)
-    }
+      year: Number(newYear),
+    };
     if (newUrl !== "") newBook.book_cover = newUrl;
     try {
       await fetch("/api/book/", {
-        method: 'POST',
+        method: "POST",
         headers: new Headers({
           "Content-Type": "application/json",
           Authorization: token[1],
         }),
-        body: JSON.stringify(newBook)
-      })
-      navigate("../profile")
-    } catch (error) {
-
-    }
+        body: JSON.stringify(newBook),
+      });
+      navigate("../profile");
+    } catch (error) {}
   }
-
-
 
   return (
     <>
@@ -111,4 +110,3 @@ const AddBook = () => {
 };
 
 export default AddBook;
-

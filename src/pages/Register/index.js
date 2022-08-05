@@ -60,8 +60,8 @@ const Register = () => {
   return (
     <>
       <ContainerLogo>
-      <Link to="/">
-        <Logo src={potato} alt="logo" />
+        <Link to="/">
+          <Logo src={potato} alt="logo" />
         </Link>
       </ContainerLogo>
       <ContainerFormRegister>

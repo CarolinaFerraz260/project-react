@@ -11,8 +11,8 @@ import Livro5 from "../../assets/Livro5.jpg";
 import Livro6 from "../../assets/Livro6.jpg";
 import Livro7 from "../../assets/Livro7.jpg";
 import Livro8 from "../../assets/Livro8.jpg";
-import iconLikeEnabled from "../../assets/iconLikeEnabled.svg";
-import iconLikeDisabled from "../../assets/iconLikeDisabled.svg";
+// import iconLikeEnabled from "../../assets/iconLikeEnabled.svg";
+// import iconLikeDisabled from "../../assets/iconLikeDisabled.svg";
 
 // const likes = {
 //   likeEnabled: iconLikeEnabled,

@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Livro from "../../assets/Livro.jpg";
 import {
   ContainerProfile,
   ContainerInfosUser,
@@ -14,6 +13,8 @@ import {
   ButtonSaveProfile,
 } from "./styles";
 import { useLocation, useNavigate } from "react-router-dom";
+
+// TODO mudar codigo
 const ChangeProfile = () => {
 
   const navigate = useNavigate();
@@ -34,7 +35,6 @@ const ChangeProfile = () => {
       document.querySelector("#chimg").value = user.profile_picture;
     }
   }, []);
-
 
   async function updateUser(e) {
 

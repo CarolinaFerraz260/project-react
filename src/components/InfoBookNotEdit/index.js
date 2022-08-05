@@ -1,5 +1,3 @@
-import React from "react";
-import Livro from "../../assets/Livro.jpg";
 import {
   ContainerBook,
   ImageBook,

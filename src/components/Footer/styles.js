@@ -9,5 +9,5 @@ export const ContainerFooter = styled.div`
   font-size: 15px;
   bottom: 0;
   position: fixed;
-  min-width: 100%;
+  width: 100%;
 `;

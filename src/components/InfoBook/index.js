@@ -17,13 +17,16 @@ const InfoBook = ({ book }) => {
     <>
       <ContainerBook>
         <ContainerButtonBack>
-          {" "}
           <ButtonBack onClick={() => navigate("../profile")}> ◀</ButtonBack>
         </ContainerButtonBack>
         <div>
           <ImageBook src={book.book_cover}></ImageBook>
           <ContainerButtonChange>
-            <ButtonChangeBook onClick={() => navigate("../changebook", { state: book })} >Edit</ButtonChangeBook>
+            <ButtonChangeBook
+              onClick={() => navigate("../changebook", { state: book })}
+            >
+              Edit
+            </ButtonChangeBook>
           </ContainerButtonChange>
         </div>
         <ContainerInfoBook>

@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   ContainerBook,
   ContainerImage,
@@ -7,9 +6,7 @@ import {
   TitleBook,
 } from "./styles";
 
-
 const Book = ({ image, title, showInfo }) => {
- 
   return (
     <>
       <ContainerBook>
@@ -17,8 +14,7 @@ const Book = ({ image, title, showInfo }) => {
         <ContainerImage>
           <ImageBook src={image} onClick={showInfo}></ImageBook>
         </ContainerImage>
-        <ContainerButtonLike>
-        </ContainerButtonLike>
+        <ContainerButtonLike></ContainerButtonLike>
       </ContainerBook>
     </>
   );
