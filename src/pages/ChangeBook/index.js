@@ -1,9 +1,7 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Livro from "../../assets/Livro.jpg";
 import {
   ContainerBook,
-
   ContainerInfosBook,
   ContainerImageBook,
   InputChangeImage,
