@@ -30,5 +30,3 @@ export const ContainerButtonLike = styled.div`
   justify-content: center;
   flex-direction: row;
 `;
-
-

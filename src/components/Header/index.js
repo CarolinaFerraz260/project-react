@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import {
   ContainerLinks,
@@ -14,7 +13,6 @@ import {
 import profile from "../../assets/profile.svg";
 import search from "../../assets/search.svg";
 import potato from "../../assets/beautifulpotato.png";
-import { ContainerFormLogin } from "../../pages/Login/styles";
 
 function Header() {
   const navigate = useNavigate();
