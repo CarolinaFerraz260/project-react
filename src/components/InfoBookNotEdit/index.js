@@ -11,7 +11,7 @@ import {
   ButtonBack,
 } from "./styles";
 
-const InfoBookNotEdit = ({ }) => {
+const InfoBookNotEdit = ({ book }) => {
   return (
     <>
       <ContainerBook>
@@ -19,12 +19,12 @@ const InfoBookNotEdit = ({ }) => {
           <ButtonBack to="/search">◀</ButtonBack>
         </ContainerButtonBack>
         <div>
-          <ImageBook src={Livro}></ImageBook>
+          <ImageBook src={book.book_cover}></ImageBook>
         </div>
         <ContainerInfoBook>
-          <TitleBook>TITULO</TitleBook>
-          <DescriptionBook>DESCRICAO</DescriptionBook>
-          <YearBook>ANO </YearBook>
+          <TitleBook>{book.title}</TitleBook>
+          <DescriptionBook>{book.description}</DescriptionBook>
+          <YearBook>{book.year}</YearBook>
         </ContainerInfoBook>
       </ContainerBook>
     </>

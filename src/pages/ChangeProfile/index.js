@@ -19,20 +19,25 @@ const ChangeProfile = () => {
   const navigate = useNavigate();
   const info = useLocation();
   const user = info.state;
+  const token = document.cookie
+    .split("; ")
+    .map((a) => a.split("="))
+    .filter(([a, b]) => a === "token")
+    .flat();
 
   useEffect(() => {
-    document.querySelector("#chname").value = user.name;
-    document.querySelector("#chemail").value = user.email;
-    document.querySelector("#chimg").value = user.profile_picture;
+    if (user === null || token[1] === "") {
+      navigate("../home");
+    } else {
+      document.querySelector("#chname").value = user.name;
+      document.querySelector("#chemail").value = user.email;
+      document.querySelector("#chimg").value = user.profile_picture;
+    }
   }, []);
 
 
   async function updateUser(e) {
-    const token = document.cookie
-      .split("; ")
-      .map((a) => a.split("="))
-      .filter(([a, b]) => a === "token")
-      .flat();
+
     e.preventDefault();
     const newName = e.target.querySelector("#chname").value;
     const newEmail = e.target.querySelector("#chemail").value;
@@ -64,7 +69,7 @@ const ChangeProfile = () => {
       <ContainerProfile>
         <ContainerInfosUser onSubmit={updateUser}>
           <ContainerImageUser>
-            <ImageUser src={user.profile_picture} />
+            <ImageUser src={user !== null ? user.profile_picture : null} />
           </ContainerImageUser>
           <ContainerInputs>
             <label>

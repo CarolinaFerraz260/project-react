@@ -21,10 +21,14 @@ const ChangeBook = () => {
   const book = info.state;
 
   useEffect(() => {
-    document.querySelector("#old_book_title").value = book.title;
-    document.querySelector("#old_book_description").value = book.description;
-    document.querySelector("#old_book_year").value = book.year;
-    document.querySelector("#old_book_url").value = book.book_cover;
+    if (book === null) {
+      navigate("../home");
+    } else {
+      document.querySelector("#old_book_title").value = book.title;
+      document.querySelector("#old_book_description").value = book.description;
+      document.querySelector("#old_book_year").value = book.year;
+      document.querySelector("#old_book_url").value = book.book_cover;
+    }
   }, []);
 
   async function updateBook(e) {
@@ -63,7 +67,7 @@ const ChangeBook = () => {
       <ContainerBook>
         <ContainerInfosBook onSubmit={updateBook}>
           <ContainerImageBook>
-            <ImageBook src={book.book_cover} />
+            <ImageBook src={book !== null ? book.book_cover : null} />
           </ContainerImageBook>
           <ContainerInputs>
             <label>

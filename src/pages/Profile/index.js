@@ -28,7 +28,14 @@ const Profile = () => {
     .filter(([a, b]) => a === "token")
     .flat();
   useEffect(() => {
-    profileData();
+    if (token[1] === "") {
+      setTokenValid(false);
+    } else {
+      profileData();
+    }
+
+
+
   }, []);
   async function profileData() {
     try {
@@ -114,7 +121,7 @@ const Profile = () => {
                     <img
                       src={iconDelete}
                       alt="delete"
-                      onClick={() => deleteBook(book.id)}
+                      onClick={() => deleteBook(book?.id)}
                     />
                   </ButtonDelete>
                 </ContainerButton>

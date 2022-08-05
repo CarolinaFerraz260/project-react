@@ -4,7 +4,9 @@ import SearchForm from "../../components/SearchFrom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Book from "../../components/Book";
+import { useNavigate } from "react-router-dom";
 function Search() {
+  const navigate = useNavigate();
   const [tags, setTags] = useState(new Set());
   const [data, setData] = useState([]);
 
@@ -35,7 +37,9 @@ function Search() {
       : newArr.delete(checkbox.value);
     setTags(newArr);
   }
-
+  function showInfo(book) {
+    navigate("../booksbysearch", { state: book });
+  }
 
   return (
     <>
@@ -43,7 +47,7 @@ function Search() {
       <SearchForm inputChange={inputChange} />
       <ContainerBooksFilter>
         {data.map((book, index) =>
-          <Book image={book.book_cover} title={book.title} key={index} />
+          <Book image={book.book_cover} title={book.title} key={index} showInfo={() => showInfo(book)} />
         )}
       </ContainerBooksFilter>
       <Footer />
